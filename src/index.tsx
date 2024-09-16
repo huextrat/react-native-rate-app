@@ -1,29 +1,18 @@
-import { NativeModules, Platform } from 'react-native';
+import { Platform } from 'react-native';
+import NativeRateApp from './NativeRateApp';
 
-const LINKING_ERROR =
-  `The package 'react-native-rate-app' doesn't seem to be linked. Make sure: \n\n` +
-  Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
-  '- You rebuilt the app after installing the package\n' +
-  '- You are not using Expo Go\n';
+const RateApp = {
+  async requestReview() {
+    return await NativeRateApp.requestReview();
+  },
+  async openStoreListing({ appId }: { appId?: string }) {
+    const isIOS = Platform.OS === 'ios';
+    if (isIOS) {
+      console.log('appId', appId);
+      return await NativeRateApp.openStoreListing(appId);
+    }
+    return await NativeRateApp.openStoreListing();
+  },
+};
 
-// @ts-expect-error
-const isTurboModuleEnabled = global.__turboModuleProxy != null;
-
-const RateAppModule = isTurboModuleEnabled
-  ? require('./NativeRateApp').default
-  : NativeModules.RateApp;
-
-const RateApp = RateAppModule
-  ? RateAppModule
-  : new Proxy(
-      {},
-      {
-        get() {
-          throw new Error(LINKING_ERROR);
-        },
-      }
-    );
-
-export function multiply(a: number, b: number): Promise<number> {
-  return RateApp.multiply(a, b);
-}
+export default RateApp;

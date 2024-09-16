@@ -1,17 +1,21 @@
-import { useState, useEffect } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-rate-app';
+import { StyleSheet, View, Button } from 'react-native';
+import RateApp from 'react-native-rate-app';
 
 export default function App() {
-  const [result, setResult] = useState<number | undefined>();
+  const onPressRate = async () => {
+    const result = await RateApp.requestReview();
+    console.log('rate', result);
+  };
 
-  useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
+  const onPressStoreListing = async () => {
+    const result = await RateApp.openStoreListing({ appId: '1656484083' });
+    console.log('store listing', result);
+  };
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Button title={'Rate'} onPress={onPressRate} />
+      <Button title={'OpenStore Listing'} onPress={onPressStoreListing} />
     </View>
   );
 }

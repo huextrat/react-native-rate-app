@@ -1,18 +1,44 @@
 #import "RateApp.h"
+#import <StoreKit/StoreKit.h>
 
 @implementation RateApp
 RCT_EXPORT_MODULE()
 
-// Example method
-// See // https://reactnative.dev/docs/native-modules-ios
-RCT_EXPORT_METHOD(multiply:(double)a
-                  b:(double)b
+RCT_EXPORT_METHOD(requestReview:(RCTPromiseResolveBlock)resolve
+                  reject:(RCTPromiseRejectBlock)reject)
+{
+    UIWindowScene *scene = [self findActiveScene];
+    [SKStoreReviewController requestReviewInScene:scene];
+    resolve(@(YES));
+}
+
+- (UIWindowScene *) findActiveScene {
+    for (UIWindowScene *scene in UIApplication.sharedApplication.connectedScenes) {
+        if (scene.activationState == UISceneActivationStateForegroundActive) {
+            return scene;
+        }
+    }
+    return nil;
+}
+
+RCT_EXPORT_METHOD(openStoreListing:(NSString *)appId
                   resolve:(RCTPromiseResolveBlock)resolve
                   reject:(RCTPromiseRejectBlock)reject)
 {
-    NSNumber *result = @(a * b);
+    if (!appId) {
+        reject(@"appId is required", @"appId is required", nil);
+        return;
+    }
 
-    resolve(result);
+    NSString *storeUrlString = [NSString stringWithFormat:@"itms-apps://apps.apple.com/app/id%@?action=write-review", appId];
+    NSURL *storeUrl = [NSURL URLWithString:storeUrlString];
+    [[UIApplication sharedApplication] openURL:storeUrl options:@{} completionHandler:^(BOOL success) {
+        if (success) {
+            resolve(@(YES));
+        } else {
+            reject(@"failed to open store listing", @"failed to open store listing", nil);
+        }
+    }];
 }
 
 // Don't compile this code when we build for the old architecture.

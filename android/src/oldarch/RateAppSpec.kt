@@ -7,5 +7,6 @@ import com.facebook.react.bridge.Promise
 abstract class RateAppSpec internal constructor(context: ReactApplicationContext) :
   ReactContextBaseJavaModule(context) {
 
-  abstract fun multiply(a: Double, b: Double, promise: Promise)
+  abstract fun requestReview(promise: Promise)
+  abstract fun openStoreListing(promise: Promise)
 }
