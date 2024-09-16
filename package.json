@@ -68,7 +68,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^17.0.2",
-    "@react-native/eslint-config": "^0.73.1",
+    "@react-native/eslint-config": "^0.75.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@types/jest": "^29.5.5",
