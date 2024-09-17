@@ -3443,13 +3443,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.3.6":
-  version: 18.3.6
-  resolution: "@types/react@npm:18.3.6"
+"@types/react@npm:18.3.7":
+  version: 18.3.7
+  resolution: "@types/react@npm:18.3.7"
   dependencies:
     "@types/prop-types": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 10/ba0d337244347ecbf921de174d9db9bb80b03d41ad3ae7aa65500b3339925852c97e501d7657b5cd629ffed9f7fe3820a63069847e7b8529e4d02934d0f182e9
+  checksum: 10/30cfbe33c82e8033df5f70a4f54068f4344a691cff3f2b3901dd678e89ce5477dc8faada4a45d333ea570e1992ca8fda5b096d9deddfafb8c373acababc40c70
   languageName: node
   linkType: hard
 
@@ -9583,7 +9583,7 @@ __metadata:
     "@semantic-release/changelog": "npm:6.0.3"
     "@semantic-release/git": "npm:10.0.1"
     "@types/jest": "npm:29.5.13"
-    "@types/react": "npm:18.3.6"
+    "@types/react": "npm:18.3.7"
     commitlint: "npm:19.5.0"
     del-cli: "npm:5.1.0"
     husky: "npm:9.1.6"
