@@ -1,17 +1,27 @@
-import { useState, useEffect } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-rate-app';
+import { Button, StyleSheet, View } from "react-native";
+import RateApp, { AndroidMarket } from "react-native-rate-app";
 
 export default function App() {
-  const [result, setResult] = useState<number | undefined>();
+  const onPressRate = async () => {
+    const result = await RateApp.requestReview().catch((err) =>
+      console.log(err),
+    );
+    console.log("rate", result);
+  };
 
-  useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
+  const onPressOpenStoreForReview = async () => {
+    const result = await RateApp.openStoreForReview({
+      iOSAppId: "389801252",
+      androidPackageName: "com.instagram.android",
+      androidMarket: AndroidMarket.GOOGLE,
+    }).catch((err) => console.log(err));
+    console.log("store listing", result);
+  };
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Button title={"Rate"} onPress={onPressRate} />
+      <Button title={"Open Store Review"} onPress={onPressOpenStoreForReview} />
     </View>
   );
 }
@@ -19,12 +29,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 8,
   },
 });

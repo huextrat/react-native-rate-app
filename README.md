@@ -1,33 +1,130 @@
-# react-native-rate-app
+# React Native Rate App
 
-In-App Rating on Android & iOS
+<p align="center">
+  A powerful and easy-to-use library for implementing in-app ratings in React Native applications.
+</p>
+
+<p align="center">
+  <a href="https://github.com/huextrat/react-native-rate-app/blob/main/LICENSE">
+    <img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg" />
+  </a>
+  <a href="https://www.npmjs.com/package/react-native-rate-app">
+    <img alt="npm version" src="https://img.shields.io/npm/v/react-native-rate-app.svg" />
+  </a>
+  <a href="https://www.npmjs.com/package/react-native-rate-app">
+    <img alt="npm downloads" src="https://img.shields.io/npm/dm/react-native-rate-app.svg" />
+  </a>
+</p>
+
+## Features
+
+- 🚀 Easy integration with React Native projects
+- 🔄 Cross-platform support (iOS and Android)
+- 📱 Supports Android 21+ and iOS 14+
+- 🏗️ Supports the new architecture for React Native
 
 ## Installation
 
 ```sh
+yarn add react-native-rate-app
+```
+or
+```sh
 npm install react-native-rate-app
 ```
 
-## Usage
+## iOS Setup
 
+To use the in-app review functionality on iOS, you need to add the `StoreKit` framework to your project and update your `Info.plist` file.
 
-```js
-import { multiply } from 'react-native-rate-app';
+### Adding the StoreKit Framework
 
-// ...
+1. Open your project in Xcode.
+2. Select your project in the Project Navigator.
+3. Select your app target.
+4. Go to the "Build Phases" tab.
+5. Expand the "Link Binary With Libraries" section.
+6. Click the "+" button and add `StoreKit.framework`.
 
-const result = await multiply(3, 7);
+### Updating Info.plist
+
+To allow your app to open the App Store and handle the in-app review functionality, you need to add the `LSApplicationQueriesSchemes` key to your `Info.plist` file.
+
+1. Open your `Info.plist` file.
+2. Add `itms-apps` string
+
+Example:
+```xml
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>itms-apps</string>
+</array>
 ```
+
+## API Reference
+
+This library will throw an error if something goes wrong during the execution of its methods. Make sure to handle these errors appropriately in your application.
+
+### `RateApp.requestReview()`
+
+Requests a review from the user using the native in-app review dialog.
+
+```javascript
+const result = await RateApp.requestReview();
+console.log(result); // true if successful, false otherwise
+```
+
+### Important Notes
+
+- **Quotas**: In-app reviews are subject to rate limits set by the operating system. This means the review dialog might not always appear to the user, depending on how often it has been requested previously. Note that `requestReview` will return `true` even if the rate limits have been reached. For more information, please refer to the official documentation from Apple and Google.
+- **Development Mode**: The in-app review dialog is always displayed in development mode, regardless of rate limits. This is useful for testing purposes.
+- **Best Practices**: According to operating system guidelines, it is recommended to request a review during a natural flow in your app, rather than from a button. For example, you might request a review after a user has completed a task or achieved a milestone within your app.
+
+[Apple Documentation](https://developer.apple.com/documentation/storekit/skstorereviewcontroller/3566727-requestreview#discussion)<br>
+[Google Documentation](https://developer.android.com/guide/playcore/in-app-review)
+
+### `RateApp.openStoreForReview(options)`
+
+Opens the app store page for the app, allowing the user to leave a review.
+
+```javascript
+const result = await RateApp.openStoreForReview({
+    iOSAppId: "your-ios-app-id", // Required on iOS, macOS
+    androidPackageName: "your.android.package.name", // Required on Android
+    androidMarket: AndroidMarket.GOOGLE, // Optional, defaults to GOOGLE
+});
+console.log(result); // true if successful, false otherwise
+```
+
+### Supported Android Markets
+
+The `androidMarket` option in `RateApp.openStoreForReview` supports the following markets:
+
+- `AndroidMarket.GOOGLE`: Google Play Store
+- `AndroidMarket.AMAZON`: Amazon Appstore
+- `AndroidMarket.SAMSUNG`: Samsung Galaxy Store
+- `AndroidMarket.HUAWEI`: Huawei AppGallery
+
+### Updating Info.plist
+
+You need to add the `LSApplicationQueriesSchemes` key to your `Info.plist` file to allow your app to open the App Store.
+
+1. Open your `Info.plist` file.
+2. Add the following entry:
 
 
 ## Contributing
 
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for more details.
 
 ## License
 
-MIT
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
+## Support
 
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
+If you like this project, please consider supporting it by giving it a ⭐️ on GitHub!
+
+## Acknowledgements
+
+- [create-react-native-library](https://github.com/callstack/react-native-builder-bob) for the initial project setup

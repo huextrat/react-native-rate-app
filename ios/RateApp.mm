@@ -1,18 +1,30 @@
 #import "RateApp.h"
+#import <StoreKit/StoreKit.h>
+
+static NSString *const kNoActiveSceneError = @"no_active_scene";
 
 @implementation RateApp
 RCT_EXPORT_MODULE()
 
-// Example method
-// See // https://reactnative.dev/docs/native-modules-ios
-RCT_EXPORT_METHOD(multiply:(double)a
-                  b:(double)b
-                  resolve:(RCTPromiseResolveBlock)resolve
+RCT_EXPORT_METHOD(requestReview:(RCTPromiseResolveBlock)resolve
                   reject:(RCTPromiseRejectBlock)reject)
 {
-    NSNumber *result = @(a * b);
+    UIWindowScene *scene = [self findActiveScene];
+    if (scene) {
+        [SKStoreReviewController requestReviewInScene:scene];
+        resolve(@(YES));
+    } else {
+        reject(kNoActiveSceneError, @"No active scene found", nil);
+    }
+}
 
-    resolve(result);
+- (UIWindowScene *) findActiveScene {
+    for (UIWindowScene *scene in UIApplication.sharedApplication.connectedScenes) {
+        if (scene.activationState == UISceneActivationStateForegroundActive) {
+            return scene;
+        }
+    }
+    return nil;
 }
 
 // Don't compile this code when we build for the old architecture.
