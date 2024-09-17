@@ -1,21 +1,21 @@
-import { StyleSheet, View, Button } from 'react-native';
-import RateApp from 'react-native-rate-app';
+import { StyleSheet, View, Button } from "react-native";
+import RateApp from "react-native-rate-app";
 
 export default function App() {
   const onPressRate = async () => {
     const result = await RateApp.requestReview();
-    console.log('rate', result);
+    console.log("rate", result);
   };
 
   const onPressStoreListing = async () => {
-    const result = await RateApp.openStoreListing({ appId: '1656484083' });
-    console.log('store listing', result);
+    const result = await RateApp.openStoreListing({ appId: "1656484083" });
+    console.log("store listing", result);
   };
 
   return (
     <View style={styles.container}>
-      <Button title={'Rate'} onPress={onPressRate} />
-      <Button title={'OpenStore Listing'} onPress={onPressStoreListing} />
+      <Button title={"Rate"} onPress={onPressRate} />
+      <Button title={"OpenStore Listing"} onPress={onPressStoreListing} />
     </View>
   );
 }
@@ -23,8 +23,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   box: {
     width: 60,
