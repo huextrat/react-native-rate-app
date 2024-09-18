@@ -1,5 +1,5 @@
 import { Linking, Platform } from "react-native";
-import NativeRateApp from "./NativeRateApp";
+import NativeRateApp from "./codegenSpec/NativeRateApp";
 import { ANDROID_MARKET_URLS, IOS_REVIEW_URL } from "./constants";
 import { AndroidMarket, type OpenStoreForReviewProps } from "./types";
 
