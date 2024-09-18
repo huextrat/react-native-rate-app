@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/huextrat/react-native-rate-app/compare/v1.0.3...v1.0.4) (2024-09-18)
+
+
+### Bug Fixes
+
+* export react-native source ([a7fad42](https://github.com/huextrat/react-native-rate-app/commit/a7fad425300762ddbd61ee72c67726f36d8f219c))
+
 ## [1.0.3](https://github.com/huextrat/react-native-rate-app/compare/v1.0.2...v1.0.3) (2024-09-18)
 
 
