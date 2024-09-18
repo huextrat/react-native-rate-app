@@ -1,7 +1,7 @@
 {
   "name": "react-native-rate-app",
   "version": "0.0.1",
-  "description": "In-App Rating on Android & iOS",
+  "description": "React Native module for In App Rating on Android and iOS",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
   "react-native": "src/index.ts",
