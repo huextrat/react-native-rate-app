@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/huextrat/react-native-rate-app/compare/v1.0.2...v1.0.3) (2024-09-18)
+
+
+### Bug Fixes
+
+* **ios:** new arch build ([f386236](https://github.com/huextrat/react-native-rate-app/commit/f386236ab5efdde13856d066a8c7ef1b6a202c27))
+
 ## [1.0.2](https://github.com/huextrat/react-native-rate-app/compare/v1.0.1...v1.0.2) (2024-09-18)
 
 
