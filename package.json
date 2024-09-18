@@ -114,11 +114,16 @@
   },
   "codegenConfig": {
     "name": "RNRateAppSpec",
-    "type": "modules",
+    "type": "all",
     "jsSrcsDir": "src",
+    "outputDir": {
+      "ios": "ios/generated",
+      "android": "android/generated"
+    },
     "android": {
       "javaPackageName": "com.rateapp"
-    }
+    },
+    "includesGeneratedCode": true
   },
   "create-react-native-library": {
     "type": "module-mixed",
