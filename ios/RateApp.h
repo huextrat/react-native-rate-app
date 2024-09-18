@@ -1,6 +1,6 @@
 
 #ifdef RCT_NEW_ARCH_ENABLED
-#import "RNRateAppSpec.h"
+#import "RateAppSpec.h"
 
 @interface RateApp : NSObject <NativeRateAppSpec>
 #else
