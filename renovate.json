@@ -3,5 +3,11 @@
   "extends": [
     "config:recommended"
   ],
-  "enabledManagers": ["npm", "github-actions"]
+  "enabledManagers": ["npm", "github-actions"],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    }
+  ]
 }
