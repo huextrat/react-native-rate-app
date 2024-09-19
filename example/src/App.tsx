@@ -5,9 +5,10 @@ import RateApp, { AndroidMarket } from "react-native-rate-app";
 
 export default function App() {
   const onPressRate = async () => {
-    const result = await RateApp.requestReview().catch((err) =>
-      console.log(err),
-    );
+    const result = await RateApp.requestReview({
+      androidMarket: AndroidMarket.SAMSUNG,
+      androidPackageName: "com.instagram.android",
+    }).catch((err) => console.log(err));
     console.log("rate", result);
   };
 
