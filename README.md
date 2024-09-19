@@ -20,7 +20,7 @@
 
 - 🚀 Easy integration with React Native projects
 - 🔄 Cross-platform support (iOS and Android)
-- 📱 Supports Android 21+ and iOS 14+
+- 📱 Supports Android 5+ (API level 21+) and iOS 14+
 - 🏗️ Supports the new architecture for React Native
 
 ## Installation
