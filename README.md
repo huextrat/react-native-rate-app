@@ -22,6 +22,11 @@
 - 🔄 Cross-platform support (iOS and Android)
 - 📱 Supports Android 5+ (API level 21+) and iOS 14+
 - 🏗️ Supports the new architecture for React Native
+- 🛒 Supports multiple app stores:
+  - Google Play Store
+  - Samsung Galaxy Store
+  - Huawei AppGallery
+  - Apple App Store (iOS)
 
 ## Installation
 
@@ -65,14 +70,37 @@ Example:
 
 This library will throw an error if something goes wrong during the execution of its methods. Make sure to handle these errors appropriately in your application.
 
-### `RateApp.requestReview()`
+### `RateApp.requestReview(options)`
 
 Requests a review from the user using the native in-app review dialog.
+
+#### Parameters
+
+- `options` (optional): An object containing the following properties:
+  - `androidMarket` (optional): The market where the app's review request should be directed on Android. Defaults to `AndroidMarket.GOOGLE`. Supported values are:
+    - `AndroidMarket.GOOGLE`: Google Play Store
+    - `AndroidMarket.SAMSUNG`: Samsung Galaxy Store
+    - `AndroidMarket.HUAWEI`: Huawei AppGallery
+  - `androidPackageName` (optional): The package name of the app to request a review for on Samsung Galaxy Store.
+
+#### Example
 
 ```javascript
 const result = await RateApp.requestReview();
 console.log(result); // true if successful, false otherwise
 ```
+
+### Important Note on Huawei AppGallery and Samsung Galaxy Store In-App Rating
+
+Please note that the in-app rating functionality for Huawei AppGallery and Samsung Galaxy Store has not been thoroughly tested. While the implementation follows the respective guidelines, we recommend conducting your own tests to ensure compatibility and functionality within your application environment.
+
+#### Huawei AppGallery Requirements
+
+To enable in-app reviews for the Huawei AppGallery, ensure that your app is correctly configured with Huawei Mobile Services (HMS). This functionality leverages [Huawei In-App Comments](https://developer.huawei.com/consumer/en/doc/AppGallery-connect-Guides/agc-comments-develop-0000001062858332) mechanism.
+
+#### Samsung Galaxy Store Requirements
+
+To enable in-app reviews for the Samsung Galaxy Store, ensure that your app is correctly configured. You must provide the `androidPackageName` specific to the Samsung Galaxy Store. This functionality leverages the [Galaxy Store Broadcast](https://developer.samsung.com/galaxy-store/customer-review/galaxy-store-review-broadcast.html) mechanism.
 
 ### Important Notes
 
