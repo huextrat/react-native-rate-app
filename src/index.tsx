@@ -1,7 +1,11 @@
 import { Linking, Platform } from "react-native";
 import NativeRateApp from "./codegenSpec/NativeRateApp";
 import { ANDROID_MARKET_URLS, IOS_REVIEW_URL } from "./constants";
-import { AndroidMarket, type OpenStoreForReviewProps } from "./types";
+import {
+  AndroidMarket,
+  type OpenStoreForReviewProps,
+  type RequestReviewProps,
+} from "./types";
 
 /**
  * Custom error for rate app operations
@@ -16,10 +20,34 @@ class RateAppError extends Error {
 const RateApp = {
   /**
    * Requests a review from the user.
-   * @returns A promise that resolves to a boolean indicating whether the review was successfully requested.
+   *
+   * @param {RequestReviewProps} props - The properties for the review request.
+   * @param {AndroidMarket} [props.androidMarket=AndroidMarket.GOOGLE] - The market where the app's review request should be directed on Android.
+   * @param {string} [props.androidPackageName] - The package name of the app to request a review for on Samsung Galaxy Store.
+   * @returns {Promise<boolean>} A promise that resolves to a boolean indicating whether the review was successfully requested.
    */
-  async requestReview(): Promise<boolean> {
+  async requestReview({
+    androidMarket = AndroidMarket.GOOGLE,
+    androidPackageName,
+  }: RequestReviewProps = {}): Promise<boolean> {
     try {
+      if (Platform.OS === "android") {
+        switch (androidMarket) {
+          case AndroidMarket.SAMSUNG:
+            if (!androidPackageName) {
+              throw new RateAppError(
+                "androidPackageName is required for Samsung Galaxy Store",
+              );
+            }
+            return await NativeRateApp.requestReviewGalaxyStore(
+              androidPackageName,
+            );
+          case AndroidMarket.HUAWEI:
+            return await NativeRateApp.requestReviewAppGallery();
+          default:
+            return await NativeRateApp.requestReview();
+        }
+      }
       return await NativeRateApp.requestReview();
     } catch (error) {
       throw new RateAppError(`Failed to request review: ${error}`);

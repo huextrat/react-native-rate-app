@@ -20,3 +20,15 @@ export interface OpenStoreForReviewProps {
    */
   androidMarket?: AndroidMarket;
 }
+
+export interface RequestReviewProps {
+  /**
+   * The market where the app's review request should be directed on Android.
+   * @default AndroidMarket.GOOGLE
+   */
+  androidMarket?: Exclude<AndroidMarket, AndroidMarket.AMAZON>;
+  /**
+   * The package name of the app to request a review for on Samsung Galaxy Store.
+   */
+  androidPackageName?: string;
+}
