@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.1.0](https://github.com/huextrat/react-native-rate-app/compare/v1.0.6...v1.1.0) (2024-09-27)
+
+
+### Features
+
+* support AppGallery and GalaxyStore ([#11](https://github.com/huextrat/react-native-rate-app/issues/11)) ([835a758](https://github.com/huextrat/react-native-rate-app/commit/835a758909775d4d8208692f8b0c7ca9387a1ee1))
+
 ## [1.0.6](https://github.com/huextrat/react-native-rate-app/compare/v1.0.5...v1.0.6) (2024-09-19)
 
 
