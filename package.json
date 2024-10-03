@@ -95,7 +95,14 @@
       "<rootDir>/example/node_modules",
       "<rootDir>/lib/"
     ],
-    "setupFilesAfterEnv": ["<rootDir>/setupJest.ts"]
+    "setupFilesAfterEnv": ["<rootDir>/setupJest.ts"],
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "src/**/*.tsx",
+      "!src/types.ts",
+      "!src/codegenSpec/**"
+    ],
+    "collectCoverage": true
   },
   "commitlint": {
     "extends": ["@commitlint/config-conventional"]
