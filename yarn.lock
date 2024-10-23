@@ -4450,13 +4450,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:29.5.13":
-  version: 29.5.13
-  resolution: "@types/jest@npm:29.5.13"
+"@types/jest@npm:29.5.14":
+  version: 29.5.14
+  resolution: "@types/jest@npm:29.5.14"
   dependencies:
     expect: "npm:^29.0.0"
     pretty-format: "npm:^29.0.0"
-  checksum: 10/7d6e3e4ef4b1cab0f61270d55764709512fdfbcb1bd47c0ef44117d48490529c1f264dacf3440b9188363e99e290b80b79c529eadc3af2184116a90f6856b192
+  checksum: 10/59ec7a9c4688aae8ee529316c43853468b6034f453d08a2e1064b281af9c81234cec986be796288f1bbb29efe943bc950e70c8fa8faae1e460d50e3cf9760f9b
   languageName: node
   linkType: hard
 
@@ -10486,7 +10486,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:19.5.0"
     "@semantic-release/changelog": "npm:6.0.3"
     "@semantic-release/git": "npm:10.0.1"
-    "@types/jest": "npm:29.5.13"
+    "@types/jest": "npm:29.5.14"
     "@types/react": "npm:18.3.11"
     commitlint: "npm:19.5.0"
     del-cli: "npm:6.0.0"
