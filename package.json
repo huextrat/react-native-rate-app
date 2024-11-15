@@ -87,7 +87,9 @@
     "react": "*",
     "react-native": "*"
   },
-  "workspaces": ["example"],
+  "workspaces": [
+    "example"
+  ],
   "packageManager": "yarn@4.5.1",
   "jest": {
     "preset": "react-native",
@@ -95,7 +97,9 @@
       "<rootDir>/example/node_modules",
       "<rootDir>/lib/"
     ],
-    "setupFilesAfterEnv": ["<rootDir>/setupJest.ts"],
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupJest.ts"
+    ],
     "collectCoverageFrom": [
       "src/**/*.ts",
       "src/**/*.tsx",
@@ -105,12 +109,18 @@
     "collectCoverage": true
   },
   "commitlint": {
-    "extends": ["@commitlint/config-conventional"]
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "react-native-builder-bob": {
     "source": "src",
     "output": "lib",
-    "targets": ["commonjs", "module", "typescript"]
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
+    ]
   },
   "codegenConfig": {
     "name": "RateAppSpec",
