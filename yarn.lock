@@ -3840,7 +3840,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native/babel-plugin-codegen@npm:0.76.3":
+"@react-native/babel-plugin-codegen@npm:0.76.3, @react-native/babel-plugin-codegen@npm:^0.76.3":
   version: 0.76.3
   resolution: "@react-native/babel-plugin-codegen@npm:0.76.3"
   dependencies:
@@ -10245,9 +10245,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-builder-bob@npm:0.34.0":
-  version: 0.34.0
-  resolution: "react-native-builder-bob@npm:0.34.0"
+"react-native-builder-bob@npm:0.35.0":
+  version: 0.35.0
+  resolution: "react-native-builder-bob@npm:0.35.0"
   dependencies:
     "@babel/core": "npm:^7.25.2"
     "@babel/plugin-transform-strict-mode": "npm:^7.24.7"
@@ -10255,6 +10255,7 @@ __metadata:
     "@babel/preset-flow": "npm:^7.24.7"
     "@babel/preset-react": "npm:^7.24.7"
     "@babel/preset-typescript": "npm:^7.24.7"
+    "@react-native/babel-plugin-codegen": "npm:^0.76.3"
     babel-plugin-module-resolver: "npm:^5.0.2"
     browserslist: "npm:^4.20.4"
     cosmiconfig: "npm:^9.0.0"
@@ -10273,7 +10274,7 @@ __metadata:
     yargs: "npm:^17.5.1"
   bin:
     bob: bin/bob
-  checksum: 10/0de03365629ca0532ad359460e9db289a3189ba5debb1f1f7c87caaa8b9d41f191f0b9918d74b2dd2aa834621b1cf877624433fc3c8fb823ce14981b0d07937d
+  checksum: 10/16a03b4ce8c4f43ad6ef0883b492f85399dec31c43d14bc1be191e8cbac3f83c146bdce9e0be57038f304718791370bb5f67c346e95e971d7f498efcc4087e46
   languageName: node
   linkType: hard
 
@@ -10289,7 +10290,7 @@ __metadata:
     "@react-native/typescript-config": "npm:0.76.3"
     react: "npm:18.3.1"
     react-native: "npm:0.76.3"
-    react-native-builder-bob: "npm:0.34.0"
+    react-native-builder-bob: "npm:0.35.0"
   languageName: unknown
   linkType: soft
 
@@ -10310,7 +10311,7 @@ __metadata:
     jest: "npm:29.7.0"
     react: "npm:18.3.1"
     react-native: "npm:0.76.3"
-    react-native-builder-bob: "npm:0.34.0"
+    react-native-builder-bob: "npm:0.35.0"
     semantic-release: "npm:24.2.0"
     turbo: "npm:2.3.3"
     typescript: "npm:5.7.2"
