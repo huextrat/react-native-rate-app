@@ -3849,15 +3849,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native/babel-plugin-codegen@npm:^0.76.3":
-  version: 0.76.3
-  resolution: "@react-native/babel-plugin-codegen@npm:0.76.3"
-  dependencies:
-    "@react-native/codegen": "npm:0.76.3"
-  checksum: 10/7edff369085919470c60da81b86c589d67dd94fdceda44dcf28cd18d21be0bb77c66428796205b23c9c6e440ea15effd12596197235cef81a4e50252804dc1ec
-  languageName: node
-  linkType: hard
-
 "@react-native/babel-preset@npm:0.76.4":
   version: 0.76.4
   resolution: "@react-native/babel-preset@npm:0.76.4"
@@ -3910,24 +3901,6 @@ __metadata:
   peerDependencies:
     "@babel/core": "*"
   checksum: 10/77225751e79b7d727743466158c93ef8438e1a5948faaee4744541bb1e306e326b318f0b44edf3632834a54c5e103effce47f30053126ac1b56fa14ecf9d14e3
-  languageName: node
-  linkType: hard
-
-"@react-native/codegen@npm:0.76.3":
-  version: 0.76.3
-  resolution: "@react-native/codegen@npm:0.76.3"
-  dependencies:
-    "@babel/parser": "npm:^7.25.3"
-    glob: "npm:^7.1.1"
-    hermes-parser: "npm:0.23.1"
-    invariant: "npm:^2.2.4"
-    jscodeshift: "npm:^0.14.0"
-    mkdirp: "npm:^0.5.1"
-    nullthrows: "npm:^1.1.1"
-    yargs: "npm:^17.6.2"
-  peerDependencies:
-    "@babel/preset-env": ^7.1.6
-  checksum: 10/2bc81548059095acff0d775a4f6b101b3b559992aaca8dd979faf83177a2d2d4f8653efd970a3b6563a339649d5d0e3f856ad5980c30f99861c0f948e6b34942
   languageName: node
   linkType: hard
 
@@ -10272,9 +10245,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-builder-bob@npm:0.35.0":
-  version: 0.35.0
-  resolution: "react-native-builder-bob@npm:0.35.0"
+"react-native-builder-bob@npm:0.35.2":
+  version: 0.35.2
+  resolution: "react-native-builder-bob@npm:0.35.2"
   dependencies:
     "@babel/core": "npm:^7.25.2"
     "@babel/plugin-transform-strict-mode": "npm:^7.24.7"
@@ -10282,7 +10255,6 @@ __metadata:
     "@babel/preset-flow": "npm:^7.24.7"
     "@babel/preset-react": "npm:^7.24.7"
     "@babel/preset-typescript": "npm:^7.24.7"
-    "@react-native/babel-plugin-codegen": "npm:^0.76.3"
     babel-plugin-module-resolver: "npm:^5.0.2"
     browserslist: "npm:^4.20.4"
     cosmiconfig: "npm:^9.0.0"
@@ -10301,7 +10273,7 @@ __metadata:
     yargs: "npm:^17.5.1"
   bin:
     bob: bin/bob
-  checksum: 10/16a03b4ce8c4f43ad6ef0883b492f85399dec31c43d14bc1be191e8cbac3f83c146bdce9e0be57038f304718791370bb5f67c346e95e971d7f498efcc4087e46
+  checksum: 10/cffafaa3cc21dc716711dd282f1c163c82d5fded75c9a02034b34f54bb678cf0f255514bb773ad0fff39d939c5431f49aa663a4b14febd678d1f596e7774c337
   languageName: node
   linkType: hard
 
@@ -10317,7 +10289,7 @@ __metadata:
     "@react-native/typescript-config": "npm:0.76.4"
     react: "npm:18.3.1"
     react-native: "npm:0.76.4"
-    react-native-builder-bob: "npm:0.35.0"
+    react-native-builder-bob: "npm:0.35.2"
   languageName: unknown
   linkType: soft
 
@@ -10338,7 +10310,7 @@ __metadata:
     jest: "npm:29.7.0"
     react: "npm:18.3.1"
     react-native: "npm:0.76.4"
-    react-native-builder-bob: "npm:0.35.0"
+    react-native-builder-bob: "npm:0.35.2"
     semantic-release: "npm:24.2.0"
     turbo: "npm:2.3.3"
     typescript: "npm:5.7.2"
