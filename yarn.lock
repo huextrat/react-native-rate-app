@@ -4423,20 +4423,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prop-types@npm:*":
-  version: 15.7.13
-  resolution: "@types/prop-types@npm:15.7.13"
-  checksum: 10/8935cad87c683c665d09a055919d617fe951cb3b2d5c00544e3a913f861a2bd8d2145b51c9aa6d2457d19f3107ab40784c40205e757232f6a80cc8b1c815513c
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:18.3.14":
-  version: 18.3.14
-  resolution: "@types/react@npm:18.3.14"
+"@types/react@npm:19.0.1":
+  version: 19.0.1
+  resolution: "@types/react@npm:19.0.1"
   dependencies:
-    "@types/prop-types": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 10/683927b1e24293276cf62f60f1baa666b7f1053c87ec8d8c79d2d4bc105b99e0492482f801ffce7cdef9d656c11294faa423051807a500c7475f4fbd7661bd8d
+  checksum: 10/930dd4904047059c48ae64a90fc5e8078b5bac0a14c9d927917e5a07e88e4e5073ddc944cbde90a955f9f815c23b7112caea63e407bc423913073bedecb097aa
   languageName: node
   linkType: hard
 
@@ -10287,7 +10279,7 @@ __metadata:
     "@react-native/babel-preset": "npm:0.76.4"
     "@react-native/metro-config": "npm:0.76.4"
     "@react-native/typescript-config": "npm:0.76.4"
-    react: "npm:18.3.1"
+    react: "npm:19.0.0"
     react-native: "npm:0.76.4"
     react-native-builder-bob: "npm:0.35.2"
   languageName: unknown
@@ -10303,12 +10295,12 @@ __metadata:
     "@semantic-release/changelog": "npm:6.0.3"
     "@semantic-release/git": "npm:10.0.1"
     "@types/jest": "npm:29.5.14"
-    "@types/react": "npm:18.3.14"
+    "@types/react": "npm:19.0.1"
     commitlint: "npm:19.6.0"
     del-cli: "npm:6.0.0"
     husky: "npm:9.1.7"
     jest: "npm:29.7.0"
-    react: "npm:18.3.1"
+    react: "npm:19.0.0"
     react-native: "npm:0.76.4"
     react-native-builder-bob: "npm:0.35.2"
     semantic-release: "npm:24.2.0"
@@ -10381,12 +10373,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:18.3.1":
-  version: 18.3.1
-  resolution: "react@npm:18.3.1"
-  dependencies:
-    loose-envify: "npm:^1.1.0"
-  checksum: 10/261137d3f3993eaa2368a83110466fc0e558bc2c7f7ae7ca52d94f03aac945f45146bd85e5f481044db1758a1dbb57879e2fcdd33924e2dde1bdc550ce73f7bf
+"react@npm:19.0.0":
+  version: 19.0.0
+  resolution: "react@npm:19.0.0"
+  checksum: 10/2490969c503f644703c88990d20e4011fa6119ddeca451e9de48f6d7ab058d670d2852a5fcd3aa3cd90a923ab2815d532637bd4a814add402ae5c0d4f129ee71
   languageName: node
   linkType: hard
 
