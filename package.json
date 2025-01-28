@@ -75,7 +75,7 @@
     "jest": "29.7.0",
     "react": "19.0.0",
     "react-native": "0.77.0",
-    "react-native-builder-bob": "0.35.2",
+    "react-native-builder-bob": "0.36.0",
     "semantic-release": "24.2.1",
     "turbo": "2.3.4",
     "typescript": "5.7.3"
