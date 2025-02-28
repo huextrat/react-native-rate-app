@@ -19,7 +19,7 @@ import com.google.android.play.core.review.ReviewManagerFactory
 
 @ReactModule(name = RateAppModule.NAME)
 class RateAppModule(reactContext: ReactApplicationContext) :
-  NativeRateAppSpec(reactContext), ActivityEventListener {
+  RateAppSpec(reactContext), ActivityEventListener {
 
   init {
     reactContext.addActivityEventListener(this)
@@ -29,6 +29,7 @@ class RateAppModule(reactContext: ReactApplicationContext) :
     return NAME
   }
 
+  @ReactMethod
   override fun requestReview(promise: Promise) {
     val manager: ReviewManager = ReviewManagerFactory.create(reactApplicationContext)
     val request = manager.requestReviewFlow()
@@ -53,6 +54,7 @@ class RateAppModule(reactContext: ReactApplicationContext) :
     }
   }
 
+  @ReactMethod
   override fun requestReviewAppGallery(promise: Promise) {
     promiseAppGallery = promise;
     val intent = Intent("com.huawei.appmarket.intent.action.guidecomment")
@@ -72,6 +74,7 @@ class RateAppModule(reactContext: ReactApplicationContext) :
     }
   }
   
+  @ReactMethod
   override fun requestReviewGalaxyStore(packageName: String, promise: Promise) {
     val ai = reactApplicationContext.packageManager.getApplicationInfo("com.sec.android.app.samsungapps", PackageManager.GET_META_DATA)
     val inappReviewVersion = ai.metaData.getInt("com.sec.android.app.samsungapps.review.inappReview", 0)
