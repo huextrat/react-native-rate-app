@@ -1,1 +1,1 @@
-module.exports = require('./lib/commonjs/plugin/withReactNativeRateApp');
+module.exports = require("./lib/commonjs/plugin/withReactNativeRateApp");

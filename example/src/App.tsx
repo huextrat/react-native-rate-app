@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Button, StyleSheet, View } from "react-native";
 import RateApp, { AndroidMarket } from "react-native-rate-app";
 
