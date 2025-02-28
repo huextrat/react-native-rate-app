@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/huextrat/react-native-rate-app/compare/v1.2.0...v1.2.1) (2025-02-28)
+
+
+### Bug Fixes
+
+* old arch support ([#144](https://github.com/huextrat/react-native-rate-app/issues/144)) ([b012661](https://github.com/huextrat/react-native-rate-app/commit/b012661b2b8e2711b52783b99fe7022b8a3a8068))
+
 # [1.2.0](https://github.com/huextrat/react-native-rate-app/compare/v1.1.5...v1.2.0) (2025-02-28)
 
 
