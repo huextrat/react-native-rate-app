@@ -1,5 +1,5 @@
 import { Linking, Platform } from "react-native";
-import NativeRateApp from "./codegenSpec/NativeRateApp";
+import RateApp from "./NativeRateApp";
 import { ANDROID_MARKET_URLS, IOS_REVIEW_URL } from "./constants";
 import {
   AndroidMarket,
@@ -17,7 +17,7 @@ class RateAppError extends Error {
   }
 }
 
-const RateApp = {
+const RNRateApp = {
   /**
    * Requests a review from the user.
    *
@@ -39,16 +39,14 @@ const RateApp = {
                 "androidPackageName is required for Samsung Galaxy Store",
               );
             }
-            return await NativeRateApp.requestReviewGalaxyStore(
-              androidPackageName,
-            );
+            return await RateApp.requestReviewGalaxyStore(androidPackageName);
           case AndroidMarket.HUAWEI:
-            return await NativeRateApp.requestReviewAppGallery();
+            return await RateApp.requestReviewAppGallery();
           default:
-            return await NativeRateApp.requestReview();
+            return await RateApp.requestReview();
         }
       }
-      return await NativeRateApp.requestReview();
+      return await RateApp.requestReview();
     } catch (error) {
       throw new RateAppError(`Failed to request review: ${error}`);
     }
@@ -115,5 +113,5 @@ const RateApp = {
 export * from "./types";
 export * from "./constants";
 export const { requestReview, openStoreForReview, getAndroidMarketUrl } =
-  RateApp;
-export default RateApp;
+  RNRateApp;
+export default RNRateApp;
