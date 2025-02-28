@@ -86,9 +86,13 @@
     "@types/react": "19.0.8"
   },
   "peerDependencies": {
-    "expo": ">=47.0.0",
     "react": "*",
     "react-native": "*"
+  },
+  "peerDependenciesMeta": {
+    "expo": {
+      "optional": true
+    }
   },
   "workspaces": [
     "example"
