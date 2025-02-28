@@ -37,9 +37,9 @@ const withStoreKitFramework: ConfigPlugin = (config) => {
  * @returns {ConfigPlugin} - The modified Expo configuration.
  */
 const withReactNativeRateApp: ConfigPlugin = (config) => {
-  config = withCustomInfoPlist(config);
-  config = withStoreKitFramework(config);
-  return config;
+  const configWithInfoPlist = withCustomInfoPlist(config);
+  const configWithStoreKit = withStoreKitFramework(configWithInfoPlist);
+  return configWithStoreKit;
 };
 
 export default withReactNativeRateApp;
