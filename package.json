@@ -1,6 +1,6 @@
 {
   "name": "react-native-rate-app",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "React Native module for In App Rating on Android and iOS",
   "source": "src/index.tsx",
   "main": "lib/commonjs/index.js",
@@ -96,7 +96,9 @@
       "optional": true
     }
   },
-  "workspaces": ["example"],
+  "workspaces": [
+    "example"
+  ],
   "packageManager": "yarn@4.6.0",
   "jest": {
     "preset": "react-native",
@@ -104,7 +106,9 @@
       "<rootDir>/example/node_modules",
       "<rootDir>/lib/"
     ],
-    "setupFilesAfterEnv": ["<rootDir>/setupJest.ts"],
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupJest.ts"
+    ],
     "collectCoverageFrom": [
       "src/**/*.ts",
       "src/**/*.tsx",
@@ -114,12 +118,18 @@
     "collectCoverage": true
   },
   "commitlint": {
-    "extends": ["@commitlint/config-conventional"]
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "react-native-builder-bob": {
     "source": "src",
     "output": "lib",
-    "targets": ["commonjs", "module", "typescript"]
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
+    ]
   },
   "codegenConfig": {
     "name": "RNRateAppSpec",

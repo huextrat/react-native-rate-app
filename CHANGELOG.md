@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/huextrat/react-native-rate-app/compare/v1.2.1...v1.2.2) (2025-03-01)
+
+
+### Bug Fixes
+
+* preserve existing LSApplicationQueriesSchemes when adding itms-apps ([#147](https://github.com/huextrat/react-native-rate-app/issues/147)) ([f268d66](https://github.com/huextrat/react-native-rate-app/commit/f268d660f028182e374b4109b12487f85df0fbf8))
+
 ## [1.2.1](https://github.com/huextrat/react-native-rate-app/compare/v1.2.0...v1.2.1) (2025-02-28)
 
 
