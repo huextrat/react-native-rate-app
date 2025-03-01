@@ -10,7 +10,12 @@ import type { ConfigPlugin } from "expo/config-plugins";
  */
 const withCustomInfoPlist: ConfigPlugin = (config) => {
   return withInfoPlist(config, (config) => {
-    config.modResults.LSApplicationQueriesSchemes = ["itms-apps"];
+    if (!config.modResults.LSApplicationQueriesSchemes) {
+      config.modResults.LSApplicationQueriesSchemes = [];
+    }
+    if (!config.modResults.LSApplicationQueriesSchemes.includes("itms-apps")) {
+      config.modResults.LSApplicationQueriesSchemes.push("itms-apps");
+    }
     return config;
   });
 };
