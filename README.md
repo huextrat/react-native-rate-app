@@ -38,11 +38,23 @@ or
 npm install react-native-rate-app
 ```
 
-## iOS Setup
+## Expo
+
+For Expo projects, you can use the Expo plugin in `app.json`
+
+```json
+"plugins": [
+  "react-native-rate-app"
+],
+```
+
+## Bare RN
+
+### iOS Setup
 
 To use the in-app review functionality on iOS, you need to add the `StoreKit` framework to your project and update your `Info.plist` file.
 
-### Adding the StoreKit Framework
+#### Adding the StoreKit Framework
 
 1. Open your project in Xcode.
 2. Select your project in the Project Navigator.
@@ -51,7 +63,7 @@ To use the in-app review functionality on iOS, you need to add the `StoreKit` fr
 5. Expand the "Link Binary With Libraries" section.
 6. Click the "+" button and add `StoreKit.framework`.
 
-### Updating Info.plist
+#### Updating Info.plist
 
 To allow your app to open the App Store and handle the in-app review functionality, you need to add the `LSApplicationQueriesSchemes` key to your `Info.plist` file.
 
