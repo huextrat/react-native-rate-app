@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.3](https://github.com/huextrat/react-native-rate-app/compare/v1.2.2...v1.2.3) (2025-03-06)
+
+
+### Bug Fixes
+
+* codegen ([63e2e34](https://github.com/huextrat/react-native-rate-app/commit/63e2e3450cf032fd1246b2cf837e3c2118ff6de7))
+
 ## [1.2.2](https://github.com/huextrat/react-native-rate-app/compare/v1.2.1...v1.2.2) (2025-03-01)
 
 
