@@ -126,15 +126,16 @@
     "source": "src",
     "output": "lib",
     "targets": [
+      "codegen",
       "commonjs",
       "module",
       "typescript"
     ]
   },
   "codegenConfig": {
-    "name": "RNRateAppSpec",
+    "name": "RateAppSpec",
     "type": "modules",
-    "jsSrcsDir": "src",
+    "jsSrcsDir": "./src/codegenSpec",
     "outputDir": {
       "ios": "ios/generated",
       "android": "android/generated"

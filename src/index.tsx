@@ -1,5 +1,5 @@
 import { Linking, Platform } from "react-native";
-import RateApp from "./NativeRateApp";
+import RateApp from "./codegenSpec/NativeRateApp";
 import { ANDROID_MARKET_URLS, IOS_REVIEW_URL } from "./constants";
 import {
   AndroidMarket,

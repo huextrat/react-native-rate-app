@@ -2,6 +2,7 @@
 #import <StoreKit/StoreKit.h>
 
 static NSString *const kNoActiveSceneError = @"no_active_scene";
+static NSString *const kUnsupportedPlatformError = @"unsupported_platform";
 
 @implementation RateApp
 RCT_EXPORT_MODULE()
@@ -16,6 +17,21 @@ RCT_EXPORT_METHOD(requestReview:(RCTPromiseResolveBlock)resolve
     } else {
         reject(kNoActiveSceneError, @"No active scene found", nil);
     }
+}
+
+RCT_EXPORT_METHOD(requestReviewAppGallery:(RCTPromiseResolveBlock)resolve
+                  reject:(RCTPromiseRejectBlock)reject)
+{
+    // Since this is iOS, we should reject with an appropriate message
+    reject(kUnsupportedPlatformError, @"App Gallery reviews are not supported on iOS", nil);
+}
+
+RCT_EXPORT_METHOD(requestReviewGalaxyStore:(NSString *)packageName
+                  resolve:(RCTPromiseResolveBlock)resolve
+                  reject:(RCTPromiseRejectBlock)reject)
+{
+    // Since this is iOS, we should reject with an appropriate message
+    reject(kUnsupportedPlatformError, @"Galaxy Store reviews are not supported on iOS", nil);
 }
 
 - (UIWindowScene *) findActiveScene {
