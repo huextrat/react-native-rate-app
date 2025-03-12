@@ -120,8 +120,11 @@ To enable in-app reviews for the Samsung Galaxy Store, ensure that your app is c
 - **Development Mode**: The in-app review dialog is always displayed in development mode, regardless of rate limits. This is useful for testing purposes.
 - **Best Practices**: According to operating system guidelines, it is recommended to request a review during a natural flow in your app, rather than from a button. For example, you might request a review after a user has completed a task or achieved a milestone within your app.
 
-[Apple Documentation](https://developer.apple.com/documentation/storekit/skstorereviewcontroller/3566727-requestreview#discussion)<br>
+[Apple Documentation iOS 14+](https://developer.apple.com/documentation/storekit/skstorereviewcontroller/3566727-requestreview#discussion)<br>
+[Apple Documentation iOS 16+](https://developer.apple.com/documentation/storekit/requestreviewaction)<br>
 [Google Documentation](https://developer.android.com/guide/playcore/in-app-review)
+
+Below iOS 16 library is using the deprecated SKStoreReviewController and on iOS 16+ it uses the new RequestReviewAction API. Both implementations provide the same functionality and user experience.
 
 ### `RateApp.openStoreForReview(options)`
 
