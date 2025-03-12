@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.3.0](https://github.com/huextrat/react-native-rate-app/compare/v1.2.3...v1.3.0) (2025-03-12)
+
+
+### Features
+
+* use `RequestReviewAction` API on iOS 16+ ([#158](https://github.com/huextrat/react-native-rate-app/issues/158)) ([9551ea6](https://github.com/huextrat/react-native-rate-app/commit/9551ea6fa87eb7a365c2cef705bf8509c680c91b))
+
 ## [1.2.3](https://github.com/huextrat/react-native-rate-app/compare/v1.2.2...v1.2.3) (2025-03-06)
 
 
