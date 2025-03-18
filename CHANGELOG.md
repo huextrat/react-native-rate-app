@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/huextrat/react-native-rate-app/compare/v1.3.0...v1.3.1) (2025-03-18)
+
+
+### Bug Fixes
+
+* **ios:** request review below iOS 14 ([#162](https://github.com/huextrat/react-native-rate-app/issues/162)) ([2834ad8](https://github.com/huextrat/react-native-rate-app/commit/2834ad82a3d3b510a4dfd6184c46b72a59e77a74))
+
 # [1.3.0](https://github.com/huextrat/react-native-rate-app/compare/v1.2.3...v1.3.0) (2025-03-12)
 
 
