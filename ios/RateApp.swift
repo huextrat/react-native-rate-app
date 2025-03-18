@@ -20,7 +20,11 @@ class RateApp: NSObject {
           AppStore.requestReview(in: scene)
         }
       } else {
-        SKStoreReviewController.requestReview(in: scene)
+        if #available(iOS 14.0, *) {
+          SKStoreReviewController.requestReview(in: scene)
+        } else {
+          SKStoreReviewController.requestReview()
+        }
       }
       resolve(true)
     } else {
