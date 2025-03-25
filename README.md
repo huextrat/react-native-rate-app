@@ -38,6 +38,11 @@ or
 npm install react-native-rate-app
 ```
 
+## Compatibility
+
+- React Native <0.76, use version 1.2.2 or below
+- React Native >=0.76, use version 1.2.3 or later
+
 ## Expo
 
 For Expo projects, you can use the Expo plugin in `app.json`
