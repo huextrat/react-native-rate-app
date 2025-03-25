@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.3](https://github.com/huextrat/react-native-rate-app/compare/v1.3.2...v1.3.3) (2025-03-25)
+
+
+### Bug Fixes
+
+* min RN peer dependency is now 0.76+ ([f40109d](https://github.com/huextrat/react-native-rate-app/commit/f40109d13b135acecbaf57c5afdf71def5af0cc4))
+
 ## [1.3.2](https://github.com/huextrat/react-native-rate-app/compare/v1.3.1...v1.3.2) (2025-03-20)
 
 
