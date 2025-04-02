@@ -71,7 +71,7 @@
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "@types/jest": "29.5.14",
-    "@types/react": "19.0.12",
+    "@types/react": "19.1.0",
     "commitlint": "19.8.0",
     "del-cli": "6.0.0",
     "expo": "^52.0.31",
@@ -85,7 +85,7 @@
     "typescript": "5.8.2"
   },
   "resolutions": {
-    "@types/react": "19.0.12"
+    "@types/react": "19.1.0"
   },
   "peerDependencies": {
     "react": "*",
