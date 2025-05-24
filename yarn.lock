@@ -10396,7 +10396,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"marked-terminal@npm:^7.0.0":
+"marked-terminal@npm:^7.3.0":
   version: 7.3.0
   resolution: "marked-terminal@npm:7.3.0"
   dependencies:
@@ -12907,7 +12907,7 @@ __metadata:
     react: "npm:19.1.0"
     react-native: "npm:0.78.2"
     react-native-builder-bob: "npm:0.40.11"
-    semantic-release: "npm:24.2.4"
+    semantic-release: "npm:24.2.5"
     turbo: "npm:2.5.3"
     typescript: "npm:5.8.3"
   peerDependencies:
@@ -13421,9 +13421,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semantic-release@npm:24.2.4":
-  version: 24.2.4
-  resolution: "semantic-release@npm:24.2.4"
+"semantic-release@npm:24.2.5":
+  version: 24.2.5
+  resolution: "semantic-release@npm:24.2.5"
   dependencies:
     "@semantic-release/commit-analyzer": "npm:^13.0.0-beta.1"
     "@semantic-release/error": "npm:^4.0.0"
@@ -13444,7 +13444,7 @@ __metadata:
     import-from-esm: "npm:^2.0.0"
     lodash-es: "npm:^4.17.21"
     marked: "npm:^15.0.0"
-    marked-terminal: "npm:^7.0.0"
+    marked-terminal: "npm:^7.3.0"
     micromatch: "npm:^4.0.2"
     p-each-series: "npm:^3.0.0"
     p-reduce: "npm:^3.0.0"
@@ -13456,7 +13456,7 @@ __metadata:
     yargs: "npm:^17.5.1"
   bin:
     semantic-release: bin/semantic-release.js
-  checksum: 10/c6ac7e16d9a8f58648a25fa6261139433081f176c2e5fb4495093110351b9e646c25194d50f40cad26d02568301dec5f3e87a7741b94b7d63254db90e1a32277
+  checksum: 10/4f1d75ddd823d5f7e0da650628298c47bcac09daf4e6e8898a41c4e9c9dfc4d05a4d4f93d945a8d8e3f0a00c8d372d5a71329a74ee4163ffacf72ecb9fa0c6ee
   languageName: node
   linkType: hard
 
