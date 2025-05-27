@@ -14,9 +14,9 @@
     "react-native": "0.78.2"
   },
   "devDependencies": {
-    "@babel/core": "7.27.1",
+    "@babel/core": "7.27.3",
     "@babel/preset-env": "7.27.2",
-    "@babel/runtime": "7.27.1",
+    "@babel/runtime": "7.27.3",
     "@react-native-community/cli": "15.1.3",
     "@react-native-community/cli-platform-android": "15.1.3",
     "@react-native-community/cli-platform-ios": "15.1.3",
