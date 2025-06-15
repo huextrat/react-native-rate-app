@@ -5,7 +5,9 @@
   "ignoreDeps": [
     "@react-native-community/cli",
     "@react-native-community/cli-platform-android",
-    "@react-native-community/cli-platform-ios"
+    "@react-native-community/cli-platform-ios",
+    "@types/react",
+    "react"
   ],
   "packageRules": [
     {
