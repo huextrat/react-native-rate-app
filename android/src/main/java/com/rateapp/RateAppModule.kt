@@ -115,7 +115,7 @@ class RateAppModule(reactContext: ReactApplicationContext) :
     }
   }
 
-  fun onNewIntent(intent: Intent) {
+  override fun onNewIntent(intent: Intent) {
     // No-op
   }
 
