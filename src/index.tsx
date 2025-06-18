@@ -110,8 +110,8 @@ const RNRateApp = {
   },
 };
 
-export * from "./types";
 export * from "./constants";
+export * from "./types";
 export const { requestReview, openStoreForReview, getAndroidMarketUrl } =
   RNRateApp;
 export default RNRateApp;
