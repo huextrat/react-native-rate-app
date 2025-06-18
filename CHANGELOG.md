@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.7](https://github.com/huextrat/react-native-rate-app/compare/v1.3.6...v1.3.7) (2025-06-18)
+
+
+### Bug Fixes
+
+* support RN 0.80 ([ee8201d](https://github.com/huextrat/react-native-rate-app/commit/ee8201dfd1eaa49286f5a194d6380e32111b8cbb))
+
 ## [1.3.6](https://github.com/huextrat/react-native-rate-app/compare/v1.3.5...v1.3.6) (2025-06-13)
 
 
