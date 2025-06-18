@@ -64,7 +64,7 @@ class RateAppModule(reactContext: ReactApplicationContext) :
     } ?: promise.reject("ACTIVITY_NULL", "Current activity is null")
   }
 
-  override fun onActivityResult(activity: Activity?, requestCode: Int, resultCode: Int, data: Intent?) {
+  override fun onActivityResult(activity: Activity, requestCode: Int, resultCode: Int, data: Intent?) {
     if (requestCode == REQUEST_CODE) {
       if (resultCode == Activity.RESULT_OK) {
         promiseAppGallery?.resolve(true)
@@ -73,7 +73,7 @@ class RateAppModule(reactContext: ReactApplicationContext) :
       }
     }
   }
-  
+
   @ReactMethod
   override fun requestReviewGalaxyStore(packageName: String, promise: Promise) {
     val ai = reactApplicationContext.packageManager.getApplicationInfo("com.sec.android.app.samsungapps", PackageManager.GET_META_DATA)
@@ -115,7 +115,7 @@ class RateAppModule(reactContext: ReactApplicationContext) :
     }
   }
 
-  override fun onNewIntent(intent: Intent?) {
+  override fun onNewIntent(intent: Intent) {
     // No-op
   }
 
