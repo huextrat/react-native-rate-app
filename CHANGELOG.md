@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.4.0](https://github.com/huextrat/react-native-rate-app/compare/v1.3.10...v1.4.0) (2025-08-25)
+
+
+### Features
+
+* fixing build on RN 0.79+ ([933fd0d](https://github.com/huextrat/react-native-rate-app/commit/933fd0d317143c930e7527175a1ba831a577d6f7))
+
 ## [1.3.10](https://github.com/huextrat/react-native-rate-app/compare/v1.3.9...v1.3.10) (2025-08-12)
 
 
