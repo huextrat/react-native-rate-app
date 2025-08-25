@@ -14,7 +14,6 @@
     "ios",
     "cpp",
     "*.podspec",
-    "react-native.config.js",
     "!ios/build",
     "!android/build",
     "!android/gradle",
@@ -126,7 +125,6 @@
     "source": "src",
     "output": "lib",
     "targets": [
-      "codegen",
       "commonjs",
       "module",
       "typescript"
@@ -136,18 +134,13 @@
     "name": "RateAppSpec",
     "type": "modules",
     "jsSrcsDir": "./src/codegenSpec",
-    "outputDir": {
-      "ios": "ios/generated",
-      "android": "android/generated"
-    },
     "android": {
       "javaPackageName": "com.rateapp"
-    },
-    "includesGeneratedCode": true
+    }
   },
   "create-react-native-library": {
     "type": "turbo-module",
     "languages": "kotlin-objc",
-    "version": "0.50.3"
+    "version": "0.52.1"
   }
 }
