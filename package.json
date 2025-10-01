@@ -81,7 +81,7 @@
     "react-native-builder-bob": "0.40.13",
     "semantic-release": "24.2.9",
     "turbo": "2.5.8",
-    "typescript": "5.9.2"
+    "typescript": "5.9.3"
   },
   "resolutions": {
     "@types/react": "19.0.10"
