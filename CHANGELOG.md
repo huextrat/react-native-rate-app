@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.5](https://github.com/huextrat/react-native-rate-app/compare/v1.4.4...v1.4.5) (2025-11-18)
+
+
+### Bug Fixes
+
+* update play review to 2.0.2 ([#352](https://github.com/huextrat/react-native-rate-app/issues/352)) ([edb17aa](https://github.com/huextrat/react-native-rate-app/commit/edb17aa0f86b12035c33647397507dfcb4e5ac94))
+
 ## [1.4.4](https://github.com/huextrat/react-native-rate-app/compare/v1.4.3...v1.4.4) (2025-10-21)
 
 
