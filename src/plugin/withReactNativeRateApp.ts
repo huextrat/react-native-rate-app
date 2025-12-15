@@ -1,5 +1,8 @@
-import { withInfoPlist, withXcodeProject } from "@expo/config-plugins";
-import type { ConfigPlugin } from "expo/config-plugins";
+import {
+  type ConfigPlugin,
+  withInfoPlist,
+  withXcodeProject,
+} from "@expo/config-plugins";
 
 /**
  * Modifies the `Info.plist` file to add `LSApplicationQueriesSchemes`,
