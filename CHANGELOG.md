@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.7](https://github.com/huextrat/react-native-rate-app/compare/v1.4.6...v1.4.7) (2025-12-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-native to v0.83.1 ([#385](https://github.com/huextrat/react-native-rate-app/issues/385)) ([17b32a8](https://github.com/huextrat/react-native-rate-app/commit/17b32a83f0b0cddd508064dcecfd632266de275d))
+
 ## [1.4.6](https://github.com/huextrat/react-native-rate-app/compare/v1.4.5...v1.4.6) (2025-12-15)
 
 
