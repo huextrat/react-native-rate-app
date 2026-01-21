@@ -76,7 +76,7 @@
     "expo": "54.0.31",
     "husky": "9.1.7",
     "jest": "30.2.0",
-    "prettier": "3.8.0",
+    "prettier": "3.8.1",
     "react": "19.0.0",
     "react-native": "0.83.1",
     "react-native-builder-bob": "0.40.17",
