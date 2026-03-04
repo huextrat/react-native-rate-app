@@ -1,6 +1,6 @@
 package com.rateapp
 
-import android.app.Activity;
+import android.app.Activity
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -36,18 +36,21 @@ class RateAppModule(reactContext: ReactApplicationContext) :
     request.addOnCompleteListener { task ->
       if (task.isSuccessful) {
         val reviewInfo = task.result
-        reviewInfo?.let {
-          currentActivity?.let { activity ->
-            val flow = manager.launchReviewFlow(activity, it)
-            flow.addOnCompleteListener { result ->
-              if (result.isSuccessful) {
-                promise.resolve(true)
-              } else {
-                promise.reject("REVIEW_FLOW_FAILED", "Review flow failed to complete")
-              }
+        val activity = reactApplicationContext.currentActivity
+        if (reviewInfo != null && activity != null) {
+          val flow = manager.launchReviewFlow(activity, reviewInfo)
+          flow.addOnCompleteListener { result ->
+            if (result.isSuccessful) {
+              promise.resolve(true)
+            } else {
+              promise.reject("REVIEW_FLOW_FAILED", "Review flow failed to complete")
             }
-          } ?: promise.reject("ACTIVITY_NULL", "Current activity is null")
-        } ?: promise.reject("REVIEW_INFO_NULL", "Review info is null")
+          }
+        } else if (activity == null) {
+          promise.reject("ACTIVITY_NULL", "Current activity is null")
+        } else {
+          promise.reject("REVIEW_INFO_NULL", "Review info is null")
+        }
       } else {
         promise.reject("REQUEST_REVIEW_FLOW_FAILED", "Request review flow failed")
       }
@@ -56,12 +59,15 @@ class RateAppModule(reactContext: ReactApplicationContext) :
 
   @ReactMethod
   override fun requestReviewAppGallery(promise: Promise) {
-    promiseAppGallery = promise;
+    promiseAppGallery = promise
     val intent = Intent("com.huawei.appmarket.intent.action.guidecomment")
     intent.setPackage("com.huawei.appmarket")
-    currentActivity?.let {
-      it.startActivityForResult(intent, 1001);
-    } ?: promise.reject("ACTIVITY_NULL", "Current activity is null")
+    val activity = reactApplicationContext.currentActivity
+    if (activity != null) {
+      activity.startActivityForResult(intent, REQUEST_CODE)
+    } else {
+      promise.reject("ACTIVITY_NULL", "Current activity is null")
+    }
   }
 
   override fun onActivityResult(activity: Activity, requestCode: Int, resultCode: Int, data: Intent?) {
@@ -104,10 +110,13 @@ class RateAppModule(reactContext: ReactApplicationContext) :
           data = Uri.parse(deeplinkUri)
           addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_INCLUDE_STOPPED_PACKAGES)
         }
-        currentActivity?.let {
-          it.startActivity(deeplinkIntent)
+        val activity = reactApplicationContext.currentActivity
+        if (activity != null) {
+          activity.startActivity(deeplinkIntent)
           promiseGalaxyStore?.resolve(true)
-        } ?: promiseGalaxyStore?.reject("ACTIVITY_NULL", "Current activity is null")
+        } else {
+          promiseGalaxyStore?.reject("ACTIVITY_NULL", "Current activity is null")
+        }
       } else {
         promiseGalaxyStore?.reject("NO_AUTHORITY", "No authority to write review")
       }
