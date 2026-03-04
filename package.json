@@ -66,18 +66,18 @@
     "@biomejs/biome": "2.4.5",
     "@commitlint/cli": "20.4.3",
     "@commitlint/config-conventional": "20.4.3",
-    "@react-native-community/cli": "18.0.0",
+    "@react-native-community/cli": "20.1.2",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "@types/jest": "30.0.0",
-    "@types/react": "19.0.10",
+    "@types/react": "19.2.14",
     "commitlint": "20.4.3",
     "del-cli": "7.0.0",
     "expo": "55.0.4",
     "husky": "9.1.7",
     "jest": "30.2.0",
     "prettier": "3.8.1",
-    "react": "19.0.0",
+    "react": "19.2.4",
     "react-native": "0.84.1",
     "react-native-builder-bob": "0.40.18",
     "semantic-release": "25.0.3",
@@ -85,7 +85,7 @@
     "typescript": "5.9.3"
   },
   "resolutions": {
-    "@types/react": "19.0.10"
+    "@types/react": "19.2.14"
   },
   "peerDependencies": {
     "react": "*",
@@ -128,7 +128,8 @@
     "targets": [
       "commonjs",
       "module",
-      "typescript"
+      "typescript",
+      "codegen"
     ]
   },
   "codegenConfig": {
@@ -137,7 +138,12 @@
     "jsSrcsDir": "./src/codegenSpec",
     "android": {
       "javaPackageName": "com.rateapp"
-    }
+    },
+    "outputDir": {
+      "ios": "ios/generated",
+      "android": "android/generated"
+    },
+    "includesGeneratedCode": true
   },
   "create-react-native-library": {
     "type": "turbo-module",

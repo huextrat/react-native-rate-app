@@ -3,4 +3,6 @@ plugins { id("com.facebook.react.settings") }
 extensions.configure(com.facebook.react.ReactSettingsExtension){ ex -> ex.autolinkLibrariesFromCommand() }
 rootProject.name = 'rateapp.example'
 include ':app'
+include ':react-native-rate-app'
+project(':react-native-rate-app').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-rate-app/android')
 includeBuild('../node_modules/@react-native/gradle-plugin')

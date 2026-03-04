@@ -2,13 +2,6 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
   "enabledManagers": ["npm", "github-actions"],
-  "ignoreDeps": [
-    "@react-native-community/cli",
-    "@react-native-community/cli-platform-android",
-    "@react-native-community/cli-platform-ios",
-    "@types/react",
-    "react"
-  ],
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch"],
