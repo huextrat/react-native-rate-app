@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.11](https://github.com/huextrat/react-native-rate-app/compare/v1.4.10...v1.4.11) (2026-03-04)
+
+
+### Bug Fixes
+
+* **android:** new architecture ([3302884](https://github.com/huextrat/react-native-rate-app/commit/3302884061465e06230e8e9c08929b8a3353c2ae))
+
 ## [1.4.10](https://github.com/huextrat/react-native-rate-app/compare/v1.4.9...v1.4.10) (2026-03-04)
 
 
