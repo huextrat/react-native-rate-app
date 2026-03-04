@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.10](https://github.com/huextrat/react-native-rate-app/compare/v1.4.9...v1.4.10) (2026-03-04)
+
+
+### Bug Fixes
+
+* improve android activity handling ([#443](https://github.com/huextrat/react-native-rate-app/issues/443)) ([c5811a2](https://github.com/huextrat/react-native-rate-app/commit/c5811a2a33d7255a7f54c2e973e4f6d056d23b7a)), closes [#389](https://github.com/huextrat/react-native-rate-app/issues/389)
+
 ## [1.4.9](https://github.com/huextrat/react-native-rate-app/compare/v1.4.8...v1.4.9) (2026-02-28)
 
 
