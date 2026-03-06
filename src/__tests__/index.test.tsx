@@ -1,47 +1,47 @@
-import { Linking, Platform } from "react-native";
-import NativeRateApp from "../codegenSpec/NativeRateApp";
-import RateApp, { IOS_REVIEW_URL } from "../index";
-import { AndroidMarket } from "../types";
+import { Linking, Platform } from 'react-native';
+import NativeRateApp from '../NativeRateApp';
+import RateApp, { IOS_REVIEW_URL } from '../index';
+import { AndroidMarket } from '../types';
 
-describe("RateApp", () => {
-  describe("requestReview", () => {
+describe('RateApp', () => {
+  describe('requestReview', () => {
     beforeEach(() => {
       jest.resetAllMocks();
     });
 
-    it("should request a review successfully", async () => {
-      jest.spyOn(NativeRateApp, "requestReview").mockResolvedValue(true);
+    it('should request a review successfully', async () => {
+      jest.spyOn(NativeRateApp, 'requestReview').mockResolvedValue(true);
       const result = await RateApp.requestReview();
       expect(result).toBe(true);
     });
 
-    it("Samsung - should request a review successfully", async () => {
-      Platform.OS = "android";
+    it('Samsung - should request a review successfully', async () => {
+      Platform.OS = 'android';
       jest
-        .spyOn(NativeRateApp, "requestReviewGalaxyStore")
+        .spyOn(NativeRateApp, 'requestReviewGalaxyStore')
         .mockResolvedValue(true);
       const result = await RateApp.requestReview({
         androidMarket: AndroidMarket.SAMSUNG,
-        androidPackageName: "com.example.app",
+        androidPackageName: 'com.example.app',
       });
       expect(result).toBe(true);
     });
 
-    it("Samsung - androidPackageName should be required", async () => {
-      Platform.OS = "android";
+    it('Samsung - androidPackageName should be required', async () => {
+      Platform.OS = 'android';
       await expect(
         RateApp.requestReview({
           androidMarket: AndroidMarket.SAMSUNG,
-        }),
+        })
       ).rejects.toThrow(
-        "androidPackageName is required for Samsung Galaxy Store",
+        'androidPackageName is required for Samsung Galaxy Store'
       );
     });
 
-    it("Huawei - should request a review successfully", async () => {
-      Platform.OS = "android";
+    it('Huawei - should request a review successfully', async () => {
+      Platform.OS = 'android';
       jest
-        .spyOn(NativeRateApp, "requestReviewAppGallery")
+        .spyOn(NativeRateApp, 'requestReviewAppGallery')
         .mockResolvedValue(true);
       const result = await RateApp.requestReview({
         androidMarket: AndroidMarket.HUAWEI,
@@ -49,27 +49,27 @@ describe("RateApp", () => {
       expect(result).toBe(true);
     });
 
-    it("should throw RateAppError if requestReview fails", async () => {
+    it('should throw RateAppError if requestReview fails', async () => {
       jest
-        .spyOn(NativeRateApp, "requestReview")
-        .mockRejectedValue(new Error("Test error"));
+        .spyOn(NativeRateApp, 'requestReview')
+        .mockRejectedValue(new Error('Test error'));
       await expect(RateApp.requestReview()).rejects.toThrow(
-        "Failed to request review: Error: Test error",
+        'Failed to request review: Error: Test error'
       );
     });
   });
 
-  describe("openStoreForReview", () => {
+  describe('openStoreForReview', () => {
     beforeEach(() => {
       jest.resetAllMocks();
     });
 
-    it("should open iOS store listing successfully", async () => {
-      Platform.OS = "ios";
-      const iOSAppId = "123456789";
+    it('should open iOS store listing successfully', async () => {
+      Platform.OS = 'ios';
+      const iOSAppId = '123456789';
       const url = `${IOS_REVIEW_URL}${iOSAppId}?action=write-review`;
-      jest.spyOn(Linking, "canOpenURL").mockResolvedValue(true);
-      jest.spyOn(Linking, "openURL").mockResolvedValue(true);
+      jest.spyOn(Linking, 'canOpenURL').mockResolvedValue(true);
+      jest.spyOn(Linking, 'openURL').mockResolvedValue(Promise.resolve());
 
       const result = await RateApp.openStoreForReview({ iOSAppId });
       expect(result).toBe(true);
@@ -77,19 +77,19 @@ describe("RateApp", () => {
       expect(Linking.openURL).toHaveBeenCalledWith(url);
     });
 
-    it("should throw RateAppError if iOSAppId is missing", async () => {
-      Platform.OS = "ios";
+    it('should throw RateAppError if iOSAppId is missing', async () => {
+      Platform.OS = 'ios';
       await expect(RateApp.openStoreForReview({})).rejects.toThrow(
-        "iOSAppId is required for iOS and macOS",
+        'iOSAppId is required for iOS and macOS'
       );
     });
 
-    it("should open Android store listing successfully", async () => {
-      Platform.OS = "android";
-      const androidPackageName = "com.example.app";
+    it('should open Android store listing successfully', async () => {
+      Platform.OS = 'android';
+      const androidPackageName = 'com.example.app';
       const url = `market://details?id=${androidPackageName}`;
-      jest.spyOn(Linking, "canOpenURL").mockResolvedValue(true);
-      jest.spyOn(Linking, "openURL").mockResolvedValue(true);
+      jest.spyOn(Linking, 'canOpenURL').mockResolvedValue(true);
+      jest.spyOn(Linking, 'openURL').mockResolvedValue(Promise.resolve());
 
       const result = await RateApp.openStoreForReview({ androidPackageName });
       expect(result).toBe(true);
@@ -97,89 +97,89 @@ describe("RateApp", () => {
       expect(Linking.openURL).toHaveBeenCalledWith(url);
     });
 
-    it("should throw RateAppError if androidPackageName is missing", async () => {
-      Platform.OS = "android";
+    it('should throw RateAppError if androidPackageName is missing', async () => {
+      Platform.OS = 'android';
       await expect(RateApp.openStoreForReview({})).rejects.toThrow(
-        "androidPackageName is required for Android",
+        'androidPackageName is required for Android'
       );
     });
 
-    it("should throw RateAppError for unsupported platform", async () => {
-      Platform.OS = "windows";
+    it('should throw RateAppError for unsupported platform', async () => {
+      Platform.OS = 'windows';
       await expect(RateApp.openStoreForReview({})).rejects.toThrow(
-        "Unsupported platform: windows",
+        'Unsupported platform: windows'
       );
     });
   });
 
-  describe("getAndroidMarketUrl", () => {
-    it("should return the correct URL for Google Play", () => {
-      const packageName = "com.example.app";
+  describe('getAndroidMarketUrl', () => {
+    it('should return the correct URL for Google Play', () => {
+      const packageName = 'com.example.app';
       const url = RateApp.getAndroidMarketUrl(
         AndroidMarket.GOOGLE,
-        packageName,
+        packageName
       );
       expect(url).toBe(`market://details?id=${packageName}`);
     });
 
-    it("Samsung - should return the correct URL for Samsung Galaxy Store", () => {
-      const packageName = "com.example.app";
+    it('Samsung - should return the correct URL for Samsung Galaxy Store', () => {
+      const packageName = 'com.example.app';
       const url = RateApp.getAndroidMarketUrl(
         AndroidMarket.SAMSUNG,
-        packageName,
+        packageName
       );
       expect(url).toBe(`samsungapps://ProductDetail/${packageName}`);
     });
 
-    it("Huawei - should return the correct URL for Huawei AppGallery", () => {
-      const packageName = "com.example.app";
+    it('Huawei - should return the correct URL for Huawei AppGallery', () => {
+      const packageName = 'com.example.app';
       const url = RateApp.getAndroidMarketUrl(
         AndroidMarket.HUAWEI,
-        packageName,
+        packageName
       );
       expect(url).toBe(`appmarket://details?id=${packageName}`);
     });
 
-    it("Amazon - should return the correct URL for Amazon Appstore", () => {
-      const packageName = "com.example.app";
+    it('Amazon - should return the correct URL for Amazon Appstore', () => {
+      const packageName = 'com.example.app';
       const url = RateApp.getAndroidMarketUrl(
         AndroidMarket.AMAZON,
-        packageName,
+        packageName
       );
       expect(url).toBe(`amzn://apps/android?p=${packageName}`);
     });
 
-    it("should throw RateAppError for unsupported Android market", () => {
-      const packageName = "com.example.app";
+    it('should throw RateAppError for unsupported Android market', () => {
+      const packageName = 'com.example.app';
       expect(() =>
         RateApp.getAndroidMarketUrl(
-          "unsupported_market" as AndroidMarket,
-          packageName,
-        ),
-      ).toThrow("Unsupported Android market: unsupported_market");
+          'unsupported_market' as AndroidMarket,
+          packageName
+        )
+      ).toThrow('Unsupported Android market: unsupported_market');
     });
 
-    it("should return false when canOpenURL returns false", async () => {
-      Platform.OS = "ios";
-      const mockIosAppId = "123456789";
-      jest.spyOn(Linking, "canOpenURL").mockResolvedValue(false);
+    it('should return false when canOpenURL returns false', async () => {
+      Platform.OS = 'ios';
+      const mockIosAppId = '123456789';
+      jest.spyOn(Linking, 'canOpenURL').mockResolvedValue(false);
       const result = await RateApp.openStoreForReview({
         iOSAppId: mockIosAppId,
       });
       expect(result).toBe(false);
     });
 
-    it("should throw RateAppError if opening the store fails", async () => {
-      Platform.OS = "ios";
-      const iOSAppId = "123456789";
+    it('should throw RateAppError if opening the store fails', async () => {
+      Platform.OS = 'ios';
+      const iOSAppId = '123456789';
       const url = `${IOS_REVIEW_URL}${iOSAppId}?action=write-review`;
-      jest.spyOn(Linking, "canOpenURL").mockResolvedValue(true);
+      jest.spyOn(Linking, 'canOpenURL').mockResolvedValue(true);
       jest
-        .spyOn(Linking, "openURL")
-        .mockRejectedValue(new Error("Failed to open URL"));
+        .spyOn(Linking, 'openURL')
+        .mockRejectedValue(new Error('Failed to open URL'));
 
       await expect(RateApp.openStoreForReview({ iOSAppId })).rejects.toThrow(
-        "Failed to open store for review: Error: Failed to open URL",
+        'Failed to open store for review: Error: Failed to open URL'
       );
       expect(Linking.canOpenURL).toHaveBeenCalledWith(url);
       expect(Linking.openURL).toHaveBeenCalledWith(url);

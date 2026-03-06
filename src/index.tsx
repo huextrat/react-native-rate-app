@@ -1,11 +1,11 @@
-import { Linking, Platform } from "react-native";
-import RateApp from "./codegenSpec/NativeRateApp";
-import { ANDROID_MARKET_URLS, IOS_REVIEW_URL } from "./constants";
+import { Linking, Platform } from 'react-native';
+import RateApp from './NativeRateApp';
+import { ANDROID_MARKET_URLS, IOS_REVIEW_URL } from './constants';
 import {
   AndroidMarket,
   type OpenStoreForReviewProps,
   type RequestReviewProps,
-} from "./types";
+} from './types';
 
 /**
  * Custom error for rate app operations
@@ -13,7 +13,7 @@ import {
 class RateAppError extends Error {
   constructor(message: string) {
     super(message);
-    this.name = "RateAppError";
+    this.name = 'RateAppError';
   }
 }
 
@@ -31,12 +31,12 @@ const RNRateApp = {
     androidPackageName,
   }: RequestReviewProps = {}): Promise<boolean> {
     try {
-      if (Platform.OS === "android") {
+      if (Platform.OS === 'android') {
         switch (androidMarket) {
           case AndroidMarket.SAMSUNG:
             if (!androidPackageName) {
               throw new RateAppError(
-                "androidPackageName is required for Samsung Galaxy Store",
+                'androidPackageName is required for Samsung Galaxy Store'
               );
             }
             return await RateApp.requestReviewGalaxyStore(androidPackageName);
@@ -62,19 +62,19 @@ const RNRateApp = {
     androidPackageName,
     androidMarket = AndroidMarket.GOOGLE,
   }: OpenStoreForReviewProps): Promise<boolean> {
-    const isIOS = Platform.OS === "ios";
-    const ismacOS = Platform.OS === "macos";
-    const isAndroid = Platform.OS === "android";
-    let url = "";
+    const isIOS = Platform.OS === 'ios';
+    const ismacOS = Platform.OS === 'macos';
+    const isAndroid = Platform.OS === 'android';
+    let url = '';
 
     if (isIOS || ismacOS) {
       if (!iOSAppId) {
-        throw new RateAppError("iOSAppId is required for iOS and macOS");
+        throw new RateAppError('iOSAppId is required for iOS and macOS');
       }
       url = `${IOS_REVIEW_URL}${iOSAppId}?action=write-review`;
     } else if (isAndroid) {
       if (!androidPackageName) {
-        throw new RateAppError("androidPackageName is required for Android");
+        throw new RateAppError('androidPackageName is required for Android');
       }
       url = this.getAndroidMarketUrl(androidMarket, androidPackageName);
     } else {
@@ -100,18 +100,18 @@ const RNRateApp = {
    */
   getAndroidMarketUrl(
     androidMarket: AndroidMarket,
-    androidPackageName: string,
+    androidPackageName: string
   ): string {
     const urlTemplate = ANDROID_MARKET_URLS[androidMarket];
     if (!urlTemplate) {
       throw new RateAppError(`Unsupported Android market: ${androidMarket}`);
     }
-    return urlTemplate.replace("{packageName}", androidPackageName);
+    return urlTemplate.replace('{packageName}', androidPackageName);
   },
 };
 
-export * from "./constants";
-export * from "./types";
+export * from './constants';
+export * from './types';
 export const { requestReview, openStoreForReview, getAndroidMarketUrl } =
   RNRateApp;
 export default RNRateApp;

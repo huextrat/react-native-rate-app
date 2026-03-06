@@ -1,8 +1,8 @@
 export enum AndroidMarket {
-  GOOGLE = "google",
-  AMAZON = "amazon",
-  SAMSUNG = "samsung",
-  HUAWEI = "huawei",
+  GOOGLE = 'google',
+  AMAZON = 'amazon',
+  SAMSUNG = 'samsung',
+  HUAWEI = 'huawei',
 }
 
 export interface OpenStoreForReviewProps {

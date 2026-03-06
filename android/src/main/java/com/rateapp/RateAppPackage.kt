@@ -16,18 +16,16 @@ class RateAppPackage : BaseReactPackage() {
     }
   }
 
-  override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
-    return ReactModuleInfoProvider {
-      val moduleInfos: MutableMap<String, ReactModuleInfo> = HashMap()
-      moduleInfos[RateAppModule.NAME] = ReactModuleInfo(
-        RateAppModule.NAME,
-        RateAppModule.NAME,
-        false,  // canOverrideExistingModule
-        false,  // needsEagerInit
-        false,  // isCxxModule
-        true // isTurboModule
+  override fun getReactModuleInfoProvider() = ReactModuleInfoProvider {
+    mapOf(
+      RateAppModule.NAME to ReactModuleInfo(
+        name = RateAppModule.NAME,
+        className = RateAppModule.NAME,
+        canOverrideExistingModule = false,
+        needsEagerInit = false,
+        isCxxModule = false,
+        isTurboModule = true
       )
-      moduleInfos
-    }
+    )
   }
 }

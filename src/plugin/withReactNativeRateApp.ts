@@ -2,7 +2,7 @@ import {
   type ConfigPlugin,
   withInfoPlist,
   withXcodeProject,
-} from "@expo/config-plugins";
+} from '@expo/config-plugins';
 
 /**
  * Modifies the `Info.plist` file to add `LSApplicationQueriesSchemes`,
@@ -16,8 +16,8 @@ const withCustomInfoPlist: ConfigPlugin = (config) => {
     if (!config.modResults.LSApplicationQueriesSchemes) {
       config.modResults.LSApplicationQueriesSchemes = [];
     }
-    if (!config.modResults.LSApplicationQueriesSchemes.includes("itms-apps")) {
-      config.modResults.LSApplicationQueriesSchemes.push("itms-apps");
+    if (!config.modResults.LSApplicationQueriesSchemes.includes('itms-apps')) {
+      config.modResults.LSApplicationQueriesSchemes.push('itms-apps');
     }
     return config;
   });
@@ -32,7 +32,7 @@ const withCustomInfoPlist: ConfigPlugin = (config) => {
  */
 const withStoreKitFramework: ConfigPlugin = (config) => {
   return withXcodeProject(config, (config) => {
-    config.modResults.addFramework("StoreKit.framework", { required: true });
+    config.modResults.addFramework('StoreKit.framework', { required: true });
     return config;
   });
 };
