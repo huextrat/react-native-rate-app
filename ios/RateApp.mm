@@ -1,15 +1,19 @@
-#import <React/RCTBridgeModule.h>
+#import "RateApp.h"
+#import "RateApp-Swift.h"
 
-@interface RCT_EXTERN_MODULE(RateApp, NSObject)
+// Swift implements RateApp (requestReview, etc.). This category adds the
+// TurboModule C++ glue that cannot be expressed in Swift.
+@implementation RateApp (TurboModule)
 
-RCT_EXTERN_METHOD(requestReview:(RCTPromiseResolveBlock)resolve
-                  reject:(RCTPromiseRejectBlock)reject)
+- (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:
+    (const facebook::react::ObjCTurboModule::InitParams &)params
+{
+    return std::make_shared<facebook::react::NativeRateAppSpecJSI>(params);
+}
 
-RCT_EXTERN_METHOD(requestReviewAppGallery:(RCTPromiseResolveBlock)resolve
-                  reject:(RCTPromiseRejectBlock)reject)
-
-RCT_EXTERN_METHOD(requestReviewGalaxyStore:(NSString *)packageName
-                  resolve:(RCTPromiseResolveBlock)resolve
-                  reject:(RCTPromiseRejectBlock)reject)
++ (NSString *)moduleName
+{
+  return @"RateApp";
+}
 
 @end

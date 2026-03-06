@@ -1,6 +1,6 @@
-jest.mock("react-native/Libraries/TurboModule/TurboModuleRegistry", () => ({
+jest.mock('react-native/Libraries/TurboModule/TurboModuleRegistry', () => ({
   getEnforcing: jest.fn((moduleName: string) => {
-    if (moduleName === "RateApp") {
+    if (moduleName === 'RateApp') {
       return {
         requestReview: jest.fn(),
         requestReviewGalaxyStore: jest.fn(),
