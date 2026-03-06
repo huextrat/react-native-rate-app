@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.5.0](https://github.com/huextrat/react-native-rate-app/compare/v1.4.12...v1.5.0) (2026-03-06)
+
+
+### Features
+
+* **major:** release v2 ([#449](https://github.com/huextrat/react-native-rate-app/issues/449)) ([78e9cdb](https://github.com/huextrat/react-native-rate-app/commit/78e9cdb24e2fdb52bcd09c50f3cf227c02ca3bd6))
+
 ## [1.4.12](https://github.com/huextrat/react-native-rate-app/compare/v1.4.11...v1.4.12) (2026-03-04)
 
 
