@@ -16,12 +16,14 @@
   </a>
 </p>
 
+> **v2 is here:** Version 2 supports **only the New Architecture**. Versions older than v2 are **no longer maintained**.
+
 ## Features
 
 - 🚀 Easy integration with React Native projects
 - 🔄 Cross-platform support (iOS and Android)
 - 📱 Supports Android 5+ (API level 21+) and iOS 14+
-- 🏗️ Supports the new architecture for React Native
+- 🏗️ New Architecture only
 - 🛒 Supports multiple app stores:
   - Google Play Store
   - Samsung Galaxy Store
@@ -40,8 +42,8 @@ npm install react-native-rate-app
 
 ## Compatibility
 
-- React Native <0.76, use version 1.2.2 or below
-- React Native >=0.76, use version 1.2.3 or later
+- **v2:** New Architecture only. No legacy architecture support.
+- **v1.x and below:** **No longer maintained.** Most v1 versions are not compatible with recent React Native versions.
 
 ## Expo
 
