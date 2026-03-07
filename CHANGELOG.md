@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.5.2](https://github.com/huextrat/react-native-rate-app/compare/v1.5.1...v1.5.2) (2026-03-07)
+
+
+### Bug Fixes
+
+* 1.5.2 ([f5546b2](https://github.com/huextrat/react-native-rate-app/commit/f5546b249e1277751ed1b26f7b8bf3132ef1e6b5))
+* release ([7223f75](https://github.com/huextrat/react-native-rate-app/commit/7223f75bb9ca36882a08358a6895c1451d5f2d29))
+* use swift ([2fc9bd3](https://github.com/huextrat/react-native-rate-app/commit/2fc9bd39286efcf5f6779f2d85ed8d0f1f46ee4a))
+
 ## [1.5.1](https://github.com/huextrat/react-native-rate-app/compare/v1.5.0...v1.5.1) (2026-03-07)
 
 
