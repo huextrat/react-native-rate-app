@@ -26,6 +26,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "./plugins/withReactNativeRateApp"
+      ]
+    ]
   }
 }

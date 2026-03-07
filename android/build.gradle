@@ -64,4 +64,5 @@ android {
 
 dependencies {
   implementation "com.facebook.react:react-android"
+  implementation "com.google.android.play:review:2.0.2"
 }

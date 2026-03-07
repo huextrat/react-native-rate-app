@@ -1,5 +1,5 @@
 import { withInfoPlist, withXcodeProject } from '@expo/config-plugins';
-import withReactNativeRateApp from '../plugin/withReactNativeRateApp';
+const withReactNativeRateApp = require('../plugin/withReactNativeRateApp.js');
 
 // Mock the Expo config plugins
 jest.mock('@expo/config-plugins', () => {
