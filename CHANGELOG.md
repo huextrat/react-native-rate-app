@@ -1,5 +1,7 @@
 # Changelog
 
+# [2.0.0](https://github.com/huextrat/react-native-rate-app/compare/v1.5.3...v2.0.0) (2026-03-07)
+
 ## [1.5.3](https://github.com/huextrat/react-native-rate-app/compare/v1.5.2...v1.5.3) (2026-03-07)
 
 
