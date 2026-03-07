@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.3](https://github.com/huextrat/react-native-rate-app/compare/v1.5.2...v1.5.3) (2026-03-07)
+
+
+### Bug Fixes
+
+* expo plugin ([1d18ea7](https://github.com/huextrat/react-native-rate-app/commit/1d18ea72af5617ec7780cec057b43d153ade8bae))
+
 ## [1.5.2](https://github.com/huextrat/react-native-rate-app/compare/v1.5.1...v1.5.2) (2026-03-07)
 
 
