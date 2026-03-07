@@ -50,4 +50,4 @@ const withReactNativeRateApp: ConfigPlugin = (config) => {
   return configWithStoreKit;
 };
 
-module.exports = withReactNativeRateApp;
+export default withReactNativeRateApp;
