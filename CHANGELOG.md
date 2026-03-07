@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/huextrat/react-native-rate-app/compare/v1.5.0...v1.5.1) (2026-03-07)
+
+
+### Bug Fixes
+
+* android & ios build ([a8db882](https://github.com/huextrat/react-native-rate-app/commit/a8db882d823d4d5348d14a2d00b9d929ac8f3c20))
+
 # [1.5.0](https://github.com/huextrat/react-native-rate-app/compare/v1.4.12...v1.5.0) (2026-03-06)
 
 
