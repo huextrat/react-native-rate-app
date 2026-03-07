@@ -97,6 +97,11 @@
     "react": "*",
     "react-native": "*"
   },
+  "peerDependenciesMeta": {
+    "expo": {
+      "optional": true
+    }
+  },
   "workspaces": [
     "example"
   ],
