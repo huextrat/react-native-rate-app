@@ -1,4 +1,8 @@
-const { withInfoPlist, withXcodeProject } = require('@expo/config-plugins');
+import {
+  type ConfigPlugin,
+  withInfoPlist,
+  withXcodeProject,
+} from '@expo/config-plugins';
 
 /**
  * Modifies the `Info.plist` file to add `LSApplicationQueriesSchemes`,
@@ -7,7 +11,7 @@ const { withInfoPlist, withXcodeProject } = require('@expo/config-plugins');
  * @param {ConfigPlugin} config - The Expo configuration object.
  * @returns {ConfigPlugin} - The modified Expo configuration.
  */
-const withCustomInfoPlist = (config) => {
+const withCustomInfoPlist: ConfigPlugin = (config) => {
   return withInfoPlist(config, (config) => {
     if (!config.modResults.LSApplicationQueriesSchemes) {
       config.modResults.LSApplicationQueriesSchemes = [];
@@ -26,7 +30,7 @@ const withCustomInfoPlist = (config) => {
  * @param {ConfigPlugin} config - The Expo configuration object.
  * @returns {ConfigPlugin} - The modified Expo configuration.
  */
-const withStoreKitFramework = (config) => {
+const withStoreKitFramework: ConfigPlugin = (config) => {
   return withXcodeProject(config, (config) => {
     config.modResults.addFramework('StoreKit.framework', { required: true });
     return config;
@@ -40,7 +44,7 @@ const withStoreKitFramework = (config) => {
  * @param {ConfigPlugin} config - The Expo configuration object.
  * @returns {ConfigPlugin} - The modified Expo configuration.
  */
-const withReactNativeRateApp = (config) => {
+const withReactNativeRateApp: ConfigPlugin = (config) => {
   const configWithInfoPlist = withCustomInfoPlist(config);
   const configWithStoreKit = withStoreKitFramework(configWithInfoPlist);
   return configWithStoreKit;
