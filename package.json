@@ -64,7 +64,8 @@
   },
   "homepage": "https://github.com/huextrat/react-native-rate-app#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "access": "public",
+    "provenance": true
   },
   "devDependencies": {
     "@commitlint/cli": "20.4.3",
