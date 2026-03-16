@@ -1,5 +1,9 @@
 #import "RateApp.h"
+#if __has_include(<RateApp/RateApp-Swift.h>)
+#import <RateApp/RateApp-Swift.h>
+#else
 #import "RateApp-Swift.h"
+#endif
 #import <React/RCTBridgeModule.h>
 
 @implementation RateApp {
