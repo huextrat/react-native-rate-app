@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/huextrat/react-native-rate-app/compare/v2.0.0...v2.0.1) (2026-03-16)
+
+
+### Bug Fixes
+
+* **ios:** add __has_include guard for Swift bridging header ([#461](https://github.com/huextrat/react-native-rate-app/issues/461)) ([765657f](https://github.com/huextrat/react-native-rate-app/commit/765657fcdf88e555d1caba414f7498ae5225e186)), closes [react-native-documents/document-picker#771](https://github.com/react-native-documents/document-picker/issues/771)
+
 # [2.0.0](https://github.com/huextrat/react-native-rate-app/compare/v1.5.3...v2.0.0) (2026-03-07)
 
 ## [1.5.3](https://github.com/huextrat/react-native-rate-app/compare/v1.5.2...v1.5.3) (2026-03-07)
