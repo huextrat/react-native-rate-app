@@ -1,12 +1,23 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["config:recommended"],
-    "enabledManagers": ["npm", "github-actions"],
-    "ignoreDeps": ["@eslint/js", "@types/jest", "@types/react", "react", "jest", "eslint", "react-native"],
-    "packageRules": [
-      {
-        "matchUpdateTypes": ["minor", "patch"],
-        "automerge": true
-      }
-    ]
-  }
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:best-practices", ":automergeStableNonMajor"],
+  "packageRules": [
+    {
+      "description": "Group React Native ecosystem updates for manual review",
+      "groupName": "React Native ecosystem",
+      "matchPackageNames": [
+        "react",
+        "react-native",
+        "@types/react",
+        "@react-native/**",
+        "@react-native-community/**"
+      ],
+      "automerge": false
+    },
+    {
+      "description": "Require manual review for native dependency updates",
+      "matchManagers": ["bundler", "cocoapods", "gradle", "gradle-wrapper"],
+      "automerge": false
+    }
+  ]
+}
