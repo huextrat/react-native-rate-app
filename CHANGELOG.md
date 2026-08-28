@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/huextrat/react-native-rate-app/compare/v2.1.0...v2.1.1) (2026-08-28)
+
+
+### Bug Fixes
+
+* **deps:** update react native ecosystem ([#556](https://github.com/huextrat/react-native-rate-app/issues/556)) ([606ebc5](https://github.com/huextrat/react-native-rate-app/commit/606ebc59aa0c5baabbe877113c6ee0adb33688b1))
+
 # [2.1.0](https://github.com/huextrat/react-native-rate-app/compare/v2.0.1...v2.1.0) (2026-08-28)
 
 
