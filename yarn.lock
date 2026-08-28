@@ -6917,7 +6917,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-dev-client@npm:~57.0.16":
+"expo-dev-client@npm:57.0.16":
   version: 57.0.16
   resolution: "expo-dev-client@npm:57.0.16"
   dependencies:
@@ -11809,7 +11809,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-builder-bob@npm:0.43.0, react-native-builder-bob@npm:^0.43.0":
+"react-native-builder-bob@npm:0.43.0":
   version: 0.43.0
   resolution: "react-native-builder-bob@npm:0.43.0"
   dependencies:
@@ -11841,7 +11841,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-monorepo-config@npm:^0.4.0":
+"react-native-monorepo-config@npm:0.4.0":
   version: 0.4.0
   resolution: "react-native-monorepo-config@npm:0.4.0"
   dependencies:
@@ -11856,14 +11856,14 @@ __metadata:
   resolution: "react-native-rate-app-example@workspace:example"
   dependencies:
     expo: "npm:~57.0.18"
-    expo-dev-client: "npm:~57.0.16"
+    expo-dev-client: "npm:57.0.16"
     expo-splash-screen: "npm:~57.0.8"
     expo-status-bar: "npm:~57.0.1"
     expo-system-ui: "npm:~57.0.3"
     react: "npm:19.2.3"
     react-native: "npm:0.86.3"
-    react-native-builder-bob: "npm:^0.43.0"
-    react-native-monorepo-config: "npm:^0.4.0"
+    react-native-builder-bob: "npm:0.43.0"
+    react-native-monorepo-config: "npm:0.4.0"
   languageName: unknown
   linkType: soft
 
