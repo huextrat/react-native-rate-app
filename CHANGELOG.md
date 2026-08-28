@@ -1,5 +1,12 @@
 # Changelog
 
+# [2.1.0](https://github.com/huextrat/react-native-rate-app/compare/v2.0.1...v2.1.0) (2026-08-28)
+
+
+### Features
+
+* update dependencies and Renovate configuration ([#554](https://github.com/huextrat/react-native-rate-app/issues/554)) ([ee64fd8](https://github.com/huextrat/react-native-rate-app/commit/ee64fd8a231d60b94af74e35639608656763f3e4))
+
 ## [2.0.1](https://github.com/huextrat/react-native-rate-app/compare/v2.0.0...v2.0.1) (2026-03-16)
 
 
