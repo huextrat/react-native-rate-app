@@ -6832,22 +6832,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-dev-client@npm:57.0.17":
-  version: 57.0.17
-  resolution: "expo-dev-client@npm:57.0.17"
+"expo-dev-client@npm:57.0.18":
+  version: 57.0.18
+  resolution: "expo-dev-client@npm:57.0.18"
   dependencies:
-    expo-dev-launcher: "npm:~57.0.17"
-    expo-dev-menu: "npm:~57.0.16"
+    expo-dev-launcher: "npm:~57.0.19"
+    expo-dev-menu: "npm:~57.0.18"
     expo-dev-menu-interface: "npm:~57.0.0"
     expo-manifests: "npm:~57.0.1"
     expo-updates-interface: "npm:~57.0.1"
   peerDependencies:
     expo: "*"
-  checksum: 10/130bf35cfcf452b99602df295b8a8bf8b5ac15483b0985e59e3f54445e286e0493f2def454634b59ac142b944bf37e08781759376642c30bd53ac4a11e437f4d
+  checksum: 10/ef0181981d1548919e805ee82859334247b2eff03740afdcd1fa2a4c9057eca00b35041193e6efd17533950806996314766924c8d6969df947c850f9ed99f198
   languageName: node
   linkType: hard
 
-"expo-dev-launcher@npm:~57.0.17":
+"expo-dev-launcher@npm:~57.0.19":
   version: 57.0.19
   resolution: "expo-dev-launcher@npm:57.0.19"
   dependencies:
@@ -6867,18 +6867,6 @@ __metadata:
   peerDependencies:
     expo: "*"
   checksum: 10/b2de92ae1f9eeec8d703572f2b22ef6feeb0458660315a01dc88826e68fb8488aac74ccb627dd3b298c5a50f69afb469329aa6a491542269ee8d7e33c23c2eb9
-  languageName: node
-  linkType: hard
-
-"expo-dev-menu@npm:~57.0.16":
-  version: 57.0.16
-  resolution: "expo-dev-menu@npm:57.0.16"
-  dependencies:
-    expo-dev-menu-interface: "npm:~57.0.0"
-  peerDependencies:
-    expo: "*"
-    react-native: "*"
-  checksum: 10/361053bf0ac700313dac1e3a7251b8367bf2d4d765cdd3246b0318034b8c0f23bd7653828ee6e15b981ecb241d74825bd7f538942d16f56fa364c0333ebbe8cd
   languageName: node
   linkType: hard
 
@@ -11794,7 +11782,7 @@ __metadata:
   resolution: "react-native-rate-app-example@workspace:example"
   dependencies:
     expo: "npm:~57.0.18"
-    expo-dev-client: "npm:57.0.17"
+    expo-dev-client: "npm:57.0.18"
     expo-splash-screen: "npm:~57.0.8"
     expo-status-bar: "npm:~57.0.1"
     expo-system-ui: "npm:~57.0.3"
