@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.3](https://github.com/huextrat/react-native-rate-app/compare/v2.1.2...v2.1.3) (2026-09-07)
+
+
+### Bug Fixes
+
+* **android:** skip explicit Kotlin plugin when AGP registers the kotlin extension ([#569](https://github.com/huextrat/react-native-rate-app/issues/569)) ([799f2e4](https://github.com/huextrat/react-native-rate-app/commit/799f2e4fc75151d925608a7bb1f27b9cc95a9199))
+
 ## [2.1.2](https://github.com/huextrat/react-native-rate-app/compare/v2.1.1...v2.1.2) (2026-08-29)
 
 
