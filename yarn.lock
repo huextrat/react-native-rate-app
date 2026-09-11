@@ -1925,7 +1925,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/cli@npm:^57.0.22, @expo/cli@npm:^57.0.23":
+"@expo/cli@npm:^57.0.23":
   version: 57.0.23
   resolution: "@expo/cli@npm:57.0.23"
   dependencies:
@@ -4697,7 +4697,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-preset-expo@npm:~57.0.10, babel-preset-expo@npm:~57.0.11":
+"babel-preset-expo@npm:~57.0.11":
   version: 57.0.11
   resolution: "babel-preset-expo@npm:57.0.11"
   dependencies:
@@ -6677,7 +6677,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-modules-core@npm:~57.0.16, expo-modules-core@npm:~57.0.17":
+"expo-modules-core@npm:~57.0.17":
   version: 57.0.17
   resolution: "expo-modules-core@npm:57.0.17"
   dependencies:
@@ -6761,61 +6761,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo@npm:57.0.20":
-  version: 57.0.20
-  resolution: "expo@npm:57.0.20"
-  dependencies:
-    "@babel/runtime": "npm:^7.20.0"
-    "@expo/cli": "npm:^57.0.22"
-    "@expo/config": "npm:~57.0.9"
-    "@expo/config-plugins": "npm:~57.0.9"
-    "@expo/devtools": "npm:~57.0.1"
-    "@expo/dom-webview": "npm:~57.0.1"
-    "@expo/fingerprint": "npm:^0.20.12"
-    "@expo/local-build-cache-provider": "npm:^57.0.8"
-    "@expo/log-box": "npm:^57.0.4"
-    "@expo/metro": "npm:~56.0.2"
-    "@expo/metro-config": "npm:~57.0.12"
-    "@ungap/structured-clone": "npm:^1.3.0"
-    babel-preset-expo: "npm:~57.0.10"
-    expo-asset: "npm:~57.0.16"
-    expo-constants: "npm:~57.0.17"
-    expo-file-system: "npm:~57.0.6"
-    expo-font: "npm:~57.0.3"
-    expo-keep-awake: "npm:~57.0.1"
-    expo-modules-autolinking: "npm:~57.0.12"
-    expo-modules-core: "npm:~57.0.16"
-    pretty-format: "npm:^29.7.0"
-    react-refresh: "npm:^0.14.2"
-    whatwg-url-minimum: "npm:^0.1.2"
-  peerDependencies:
-    "@expo/dom-webview": "*"
-    "@expo/metro-runtime": "*"
-    react: "*"
-    react-dom: "*"
-    react-native: "*"
-    react-native-web: "*"
-    react-native-webview: "*"
-  peerDependenciesMeta:
-    "@expo/dom-webview":
-      optional: true
-    "@expo/metro-runtime":
-      optional: true
-    react-dom:
-      optional: true
-    react-native-web:
-      optional: true
-    react-native-webview:
-      optional: true
-  bin:
-    expo: bin/cli
-    expo-modules-autolinking: bin/autolinking
-    fingerprint: bin/fingerprint
-  checksum: 10/5662d27178f440eda2ac504956fd3f888f1ce7d49faf854cd26aec6367e04a1c97f28870855ee25ec6504783cd9bd355ba4a5c30307beb7b79dd09ea66273802
-  languageName: node
-  linkType: hard
-
-"expo@npm:~57.0.18":
+"expo@npm:57.0.21, expo@npm:~57.0.18":
   version: 57.0.21
   resolution: "expo@npm:57.0.21"
   dependencies:
@@ -11606,7 +11552,7 @@ __metadata:
     eslint: "npm:9.39.5"
     eslint-config-prettier: "npm:10.1.8"
     eslint-plugin-prettier: "npm:5.5.6"
-    expo: "npm:57.0.20"
+    expo: "npm:57.0.21"
     jest: "npm:29.7.0"
     prettier: "npm:3.9.6"
     react: "npm:19.2.8"
